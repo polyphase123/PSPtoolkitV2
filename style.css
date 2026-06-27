@@ -1296,6 +1296,41 @@ select.form-control {
     font-family: monospace;
 }
 
+.chatbot-widget-pinned {
+    border-top: 3.5px solid var(--color-accent) !important;
+}
+
+.pulse-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #10B981;
+    border-radius: 50%;
+    margin-left: 8px;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: pulseStatus 1.6s infinite;
+    vertical-align: middle;
+}
+
+@keyframes pulseStatus {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.mobile-sidequest {
+    display: none;
+}
+
 /* Q&A Assistant */
 .qa-chatbox {
     border: var(--border-width) var(--border-style) var(--border-color);
@@ -1850,6 +1885,14 @@ footer {
     
     .sidebar-title {
         display: none; /* Hide 'Chapters' tag to save screen space */
+    }
+
+    .sidebar-sidequest {
+        display: none !important;
+    }
+
+    .mobile-sidequest {
+        display: block !important;
     }
     
     .sidebar-menu {

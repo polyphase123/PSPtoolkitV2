@@ -17,8 +17,9 @@
     <!-- Navigation Header -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">
-                CSP<span>//2026</span>
+            <a href="#" class="logo" style="display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; line-height: 1;">
+                <div>CSP<span>//2026</span></div>
+                <div style="font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8; margin-top: 4px; color: var(--text-secondary); font-family: var(--font-primary);">Sidequest by Engr. Franz Xyrlo I. Tobias, PEE</div>
             </a>
             <div class="nav-links">
                 <a href="#milestones" class="nav-link">Timeline</a>
@@ -69,6 +70,22 @@
         
         <!-- Sticky Sidebar Navigation -->
         <aside class="sidebar">
+            <!-- Sidequest of Engr. Franz Xyrlo I. Tobias, PEE -->
+            <div class="interactive-card sidebar-sidequest" id="tobias-sidequest" style="border: 1.5px solid var(--color-accent) !important; padding: 14px; margin-bottom: 20px; background: linear-gradient(135deg, var(--bg-card) 0%, var(--color-accent-light) 100%); border-radius: var(--border-radius-md); box-shadow: 0 1px 3px rgba(0,0,0,0.02); position: relative; overflow: hidden;">
+                <div style="font-weight: 800; font-size: 10px; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>PEE Sidequest</span>
+                    <button class="info-trigger" data-popup="pop-sidequest" aria-label="Sidequest Info" style="width: 14px; height: 14px; font-size: 8px; line-height: 14px; padding: 0; background: var(--bg-tertiary); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">i</button>
+                </div>
+                <div style="gap: 10px; margin-bottom: 8px; padding-bottom: 8px; display: flex; align-items: center; border-bottom: var(--border-width) var(--border-style) var(--border-color);">
+                    <div style="width: 32px; height: 32px; font-size: 12px; border-radius: 50%; background-color: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">FT</div>
+                    <div>
+                        <h4 style="font-size: 11px; margin: 0 0 2px 0; font-weight: 800; text-transform: uppercase;">Engr. Franz Xyrlo I. Tobias, PEE</h4>
+                        <span style="font-size: 8px; text-transform: uppercase; color: var(--color-accent); font-weight: 700; display: block; line-height: 1;">Grid Compliance Consultant</span>
+                    </div>
+                </div>
+                <p style="margin: 0 0 10px 0; font-size: 11px; color: var(--text-secondary); line-height: 1.4;">Successfully certified technical grid audit for 45 MW Solar PSA in Southern Luzon satisfying Grid Code rules.</p>
+            </div>
+
             <h3 class="sidebar-title">Handbook Chapters</h3>
             <ul class="sidebar-menu">
                 <li class="sidebar-item active" data-section="introduction"><a href="#introduction">Introduction <span class="num">01</span></a></li>
@@ -88,40 +105,58 @@
         <!-- Main Content Panel -->
         <div class="content-panel">
 
-            <!-- PINNED TO TOP: Compliance Sidequest of Engr. Franz Xyrlo I. Tobias, PEE -->
-            <div class="interactive-card pinned-sidequest" id="tobias-sidequest">
-                <div class="card-title" style="border-bottom: none; padding-bottom: 0;">
-                    Featured Compliance Spotlight
-                    <button class="info-trigger" data-popup="pop-sidequest" aria-label="Sidequest Info">i</button>
+            <!-- Mobile-only PEE Sidequest -->
+            <div class="interactive-card mobile-sidequest" style="border: 1.5px solid var(--color-accent) !important; padding: 14px; margin-bottom: 20px; background: linear-gradient(135deg, var(--bg-card) 0%, var(--color-accent-light) 100%); border-radius: var(--border-radius-md); box-shadow: 0 1px 3px rgba(0,0,0,0.02); position: relative; overflow: hidden;">
+                <div style="font-weight: 800; font-size: 10px; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>PEE Sidequest</span>
+                    <button class="info-trigger" data-popup="pop-sidequest" aria-label="Sidequest Info" style="width: 14px; height: 14px; font-size: 8px; line-height: 14px; padding: 0; background: var(--bg-tertiary); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">i</button>
                 </div>
-                <div class="sidequest-header">
-                    <div class="sidequest-avatar">FT</div>
-                    <div class="sidequest-meta">
-                        <h4>Engr. Franz Xyrlo I. Tobias, PEE</h4>
-                        <span>Principal Professional Electrical Engineer | Grid Compliance Consultant</span>
+                <div style="gap: 10px; margin-bottom: 8px; padding-bottom: 8px; display: flex; align-items: center; border-bottom: var(--border-width) var(--border-style) var(--border-color);">
+                    <div style="width: 32px; height: 32px; font-size: 12px; border-radius: 50%; background-color: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;">FT</div>
+                    <div>
+                        <h4 style="font-size: 11px; margin: 0 0 2px 0; font-weight: 800; text-transform: uppercase;">Engr. Franz Xyrlo I. Tobias, PEE</h4>
+                        <span style="font-size: 8px; text-transform: uppercase; color: var(--color-accent); font-weight: 700; display: block; line-height: 1;">Grid Compliance Consultant</span>
                     </div>
                 </div>
-                <div class="sidequest-body">
-                    <p><strong>Compliance Sidequest:</strong> Engr. Tobias, PEE successfully led the technical grid audit and joint filing compliance for a high-priority 45 MW Solar Power Supply Agreement in Southern Luzon, satisfying the Philippine Grid Code and the 2026 Amended Guidelines.</p>
-                    
-                    <div class="sidequest-stats">
-                        <div class="sq-stat">
-                            <span class="sq-stat-num">45 MW</span>
-                            <span class="sq-stat-lbl">Solar Sourced</span>
-                        </div>
-                        <div class="sq-stat">
-                            <span class="sq-stat-num">135 Days</span>
-                            <span class="sq-stat-lbl">CSP Cycle Time</span>
-                        </div>
-                        <div class="sq-stat">
-                            <span class="sq-stat-num">APPROVED</span>
-                            <span class="sq-stat-lbl">ERC Audit Status</span>
-                        </div>
+                <p style="margin: 0; font-size: 11px; color: var(--text-secondary); line-height: 1.4;">Successfully certified technical grid audit for 45 MW Solar PSA in Southern Luzon satisfying Grid Code rules.</p>
+            </div>
+
+
+
+            <!-- PINNED TO TOP: ERC Resolution 07 Compliance AI Chatbot -->
+            <div class="interactive-card chatbot-widget-pinned" id="ai-chatbot-widget">
+                <div class="card-title">
+                    <span>Regulatory AI Chatbot <span class="pulse-indicator"></span></span>
+                    <div>
+                        <button class="info-trigger" data-popup="pop-qa" aria-label="Q&A Assistant Info">i</button>
                     </div>
-                    
-                    <button class="btn btn-accent" id="sqUnlockBtn" style="width: 100%; justify-content: center;">Unlock Engineering Methodology</button>
                 </div>
-                <span class="citation-ref">Ref: Professional Regulation Commission (PRC) PEE License Audit Standards</span>
+                <p>Ask natural questions about the 2026 Amended Guidelines. The AI will parse permutations and return answers citing specific Resolution No. 07 provisions.</p>
+                <div class="qa-chatbox" style="height: 380px;">
+                    <div class="qa-messages" id="qaMessages">
+                        <div class="qa-msg bot">Hello! I am your regulatory compliance assistant. Type any question about Resolution No. 07 (e.g., "what is the timeline for post qualification?" or "what are the unplanned outage limits?"), and I will provide the citation and answer.</div>
+                    </div>
+                    <div class="qa-suggestions">
+                        <button class="qa-suggest-btn" data-q="What is the timeline for post-qualification?">Timeline Limit</button>
+                        <button class="qa-suggest-btn" data-q="Who is on the TPBAC?">TPBAC Composition</button>
+                        <button class="qa-suggest-btn" data-q="What are the unplanned outage limits?">Outage Limits</button>
+                    </div>
+                    <div class="qa-input-area">
+                        <input type="text" id="qaInput" class="qa-input" placeholder="Ask about Resolution 07 (e.g. timelines, TPBAC, outages)...">
+                        <button class="qa-send-btn" id="qaSendBtn">Ask AI</button>
+                    </div>
+                </div>
+
+                <!-- Collapsible Directory of 100 Questions -->
+                <details class="chatbot-questions-details" style="margin-top: 14px; border: var(--border-width) var(--border-style) var(--border-color); border-radius: var(--border-radius-sm); background-color: var(--bg-secondary);">
+                    <summary style="padding: 10px 14px; font-weight: 700; font-size: 13px; cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>Browse All 100 Compliance Questions</span>
+                        <span class="details-icon">&#9662;</span>
+                    </summary>
+                    <div class="questions-directory" id="qaDirectory" style="padding: 14px; max-height: 280px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; border-top: var(--border-width) var(--border-style) var(--border-color); background-color: var(--bg-card);">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </details>
             </div>
 
             <!-- Chapter 01: Introduction -->
@@ -150,7 +185,6 @@
                         <div class="card-title">
                             Milestone Deadline Calculator
                             <button class="info-trigger" data-popup="pop-timeline" aria-label="Timeline Info">i</button>
-                            <span class="card-badge">Tool 01</span>
                         </div>
                         <p>Input the date of your First Publication of the Invitation to Bid to calculate regulatory deadlines for all core milestones under the 180-day guidelines.</p>
                         
@@ -201,12 +235,34 @@
                         </div>
                     </div>
 
+                                        <!-- Feature 41: Force Majeure Timeline Impact Auditor -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Force Majeure Timeline Impact Auditor
+                            <button class="info-trigger" data-popup="pop-fm-audit" aria-label="FM Info">i</button>
+                        </div>
+                        <p>Calculate the adjusted filing deadline when timeline milestones are suspended under Section 5.5 due to force majeure.</p>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="fmStartDate" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Active CSP Start Date</label>
+                            <input type="date" id="fmStartDate" class="form-control">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="fmDays" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Force Majeure Duration (Days)</label>
+                            <input type="number" id="fmDays" class="form-control" value="15" min="1">
+                        </div>
+                        <button class="btn btn-accent" id="btnCalcFm" style="width: 100%;">Audit Adjusted Deadlines</button>
+                        <div id="fmResults" style="display: none; margin-top: 14px; flex-direction: column; gap: 8px;">
+                            <div style="display: flex; justify-content: space-between;"><span>Normal Deadline:</span> <strong id="fmNormalDate">--</strong></div>
+                            <div style="display: flex; justify-content: space-between;"><span>Adjusted Filing Deadline:</span> <strong id="fmAdjustedDate" style="color: var(--color-accent);">--</strong></div>
+                        </div>
+                    </div>
+
+
                     <!-- Feature 29: CSP Timeline Breach Fines Estimator -->
                     <div class="interactive-card">
                         <div class="card-title">
                             Breach Penalties Estimator
                             <button class="info-trigger" data-popup="pop-breach" aria-label="Breach Info">i</button>
-                            <span class="card-badge">Tool 29</span>
                         </div>
                         <p>Calculate estimated administrative fines for distribution utilities violating the mandatory CSP timelines.</p>
                         
@@ -247,7 +303,6 @@
                         <div class="card-title">
                             Exemption Eligibility Wizard
                             <button class="info-trigger" data-popup="pop-exemptions" aria-label="Exemption Info">i</button>
-                            <span class="card-badge">Tool 02</span>
                         </div>
                         <div class="wizard-box" id="exemptionWizard">
                             <div class="wizard-question" id="wizardQuestion">Loading wizard...</div>
@@ -261,12 +316,34 @@
                         <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 7 & DOE DC2023-06-0021</span>
                     </div>
 
+                                        <!-- Feature 44: Affiliate Transaction Compliance Check -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Affiliate Transaction Compliance Check
+                            <button class="info-trigger" data-popup="pop-aff-audit" aria-label="Affiliate Info">i</button>
+                        </div>
+                        <p>Audit if procuring capacity from a sister/affiliate GenCo complies with transfer pricing and board voting limits under Section 8.5.</p>
+                        <div class="check-row" style="margin-bottom: 8px;">
+                            <input type="checkbox" id="chkAffBoard">
+                            <label for="chkAffBoard" style="font-size: 12px;">Board approval excludes directors with shareholdings in the GenCo</label>
+                        </div>
+                        <div class="check-row" style="margin-bottom: 8px;">
+                            <input type="checkbox" id="chkAffCompare">
+                            <label for="chkAffCompare" style="font-size: 12px;">Offered rate is verified to beat local market price benchmarks</label>
+                        </div>
+                        <div class="check-row" style="margin-bottom: 12px;">
+                            <input type="checkbox" id="chkAffErc">
+                            <label for="chkAffErc" style="font-size: 12px;">All transfer pricing metrics are disclosed in the joint application</label>
+                        </div>
+                        <button class="btn btn-accent" id="btnAuditAff" style="width: 100%;">Audit Affiliate Compliance</button>
+                        <div id="affAuditResult" style="font-weight: 800; font-size: 13px; text-align: center; margin-top: 10px; color: var(--color-accent);">INCOMPLETE</div>
+                    </div>
+
                     <!-- Feature 3: Before vs After Matrix -->
                     <div class="interactive-card">
                         <div class="card-title">
                             Regulatory Matrix (Before vs After 2026)
                             <button class="info-trigger" data-popup="pop-matrix" aria-label="Matrix Info">i</button>
-                            <span class="card-badge">Tool 03</span>
                         </div>
                         <p>Compare previous rules with the new 2026 Amended Guidelines.</p>
                         <div class="matrix-table-container">
@@ -313,7 +390,6 @@
                         <div class="card-title">
                             Appendix & Annex Database
                             <button class="info-trigger" data-popup="pop-docs" aria-label="Documents Info">i</button>
-                            <span class="card-badge">Tool 04</span>
                         </div>
                         <div class="explorer-filters">
                             <input type="text" id="explorerSearch" class="form-control" placeholder="Search appendices (e.g. Annex A, Appendix B)...">
@@ -337,7 +413,6 @@
                         <div class="card-title">
                             Joint Application Progress Tracker
                             <button class="info-trigger" data-popup="pop-joint" aria-label="Joint Filing Info">i</button>
-                            <span class="card-badge">Tool 05</span>
                         </div>
                         <p>Track your filing preparation status. Your inputs are saved automatically to local storage.</p>
                         <div class="checklist-progress-outer">
@@ -374,7 +449,6 @@
                         <div class="card-title">
                             Bid Document Fee Estimator
                             <button class="info-trigger" data-popup="pop-fee" aria-label="Fee Info">i</button>
-                            <span class="card-badge">Tool 12</span>
                         </div>
                         <p>Calculate the estimated maximum bid document fee that a DU can charge bidding generation companies based on the procurement capacity size.</p>
                         <div class="form-group">
@@ -389,12 +463,37 @@
                         <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 4.5</span>
                     </div>
 
+                                        <!-- Feature 43: Joint Application Intake Deficiency Checker -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Joint Application Intake Deficiency Checker
+                            <button class="info-trigger" data-popup="pop-def-checker" aria-label="Deficiency Info">i</button>
+                        </div>
+                        <p>Audit if your joint filing package has the necessary components to pass the initial ERC intake review under Section 10.2.</p>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="intakeSign" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Application Signature type</label>
+                            <select id="intakeSign" class="form-control">
+                                <option value="sole">DU Sole Signature (Rejection risk)</option>
+                                <option value="joint">Joint DU-GenCo Signatures (Compliant)</option>
+                            </select>
+                        </div>
+                        <div class="check-row" style="margin-bottom: 8px;">
+                            <input type="checkbox" id="chkIntakePee">
+                            <label for="chkIntakePee" style="font-size: 12px;">PEE Certified Switchyard and GIS attached</label>
+                        </div>
+                        <div class="check-row" style="margin-bottom: 12px;">
+                            <input type="checkbox" id="chkIntakeObs">
+                            <label for="chkIntakeObs" style="font-size: 12px;">Official Observer Audit Report (Appendix E) attached</label>
+                        </div>
+                        <button class="btn btn-accent" id="btnCheckIntake" style="width: 100%;">Verify Intake Status</button>
+                        <div id="intakeResult" style="font-weight: 800; font-size: 13px; text-align: center; margin-top: 10px; color: var(--color-accent);">DEFICIENT</div>
+                    </div>
+
                     <!-- Feature 22: PEE Joint Certification Checklist -->
                     <div class="interactive-card">
                         <div class="card-title">
                             PEE Certification Audit
                             <button class="info-trigger" data-popup="pop-pee-audit" aria-label="PEE Audit Info">i</button>
-                            <span class="card-badge">Tool 22</span>
                         </div>
                         <p>Validate if all grid connection documents bear the mandatory signature of a Professional Electrical Engineer (PEE).</p>
                         
@@ -427,7 +526,6 @@
                         <div class="card-title">
                             TPBAC Composition Auditor
                             <button class="info-trigger" data-popup="pop-tpbac-audit" aria-label="TPBAC Audit Info">i</button>
-                            <span class="card-badge">Tool 31</span>
                         </div>
                         <p>Audit the composition of your Third Party Bids and Awards Committee. Regulators require exactly 5 members: 2 DU reps and 3 independent delegates.</p>
                         
@@ -497,7 +595,6 @@
                         <div class="card-title">
                             Post-Filing Hearing Tracker
                             <button class="info-trigger" data-popup="pop-hearing-tracker" aria-label="Tracker Info">i</button>
-                            <span class="card-badge">Tool 35</span>
                         </div>
                         <p>Track the mandatory legal steps, public consultations, and evidentiary hearings after your joint PSA is filed with the ERC.</p>
                         
@@ -549,7 +646,6 @@
                         <div class="card-title">
                             Bid Rates comparison Simulator
                             <button class="info-trigger" data-popup="pop-ceiling" aria-label="Ceiling Price Info">i</button>
-                            <span class="card-badge">Tool 06</span>
                         </div>
                         <p>Simulate how different bid rates compare against the reserve ceiling price.</p>
                         
@@ -581,7 +677,6 @@
                         <div class="card-title">
                             GenCo Qualification Checker
                             <button class="info-trigger" data-popup="pop-prequal" aria-label="Prequalification Info">i</button>
-                            <span class="card-badge">Tool 13</span>
                         </div>
                         <p>Verify if a bidding Generation Company satisfies all the core criteria required to qualify for bid evaluation.</p>
                         <div class="check-row">
@@ -610,7 +705,6 @@
                         <div class="card-title">
                             LCOE Performance Calculator
                             <button class="info-trigger" data-popup="pop-lcoe" aria-label="LCOE Info">i</button>
-                            <span class="card-badge">Tool 23</span>
                         </div>
                         <p>Calculate the simulated Levelized Cost of Electricity (LCOE) to compare bids on equal financial grounds.</p>
                         
@@ -642,12 +736,56 @@
                         <span class="citation-ref">Ref: ERC Appendix D-2 LCOE Guidelines</span>
                     </div>
 
+                                        <!-- Feature 45: Weighted Criteria Score Sensitivity Simulator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Weighted Criteria Score Sensitivity Simulator
+                            <button class="info-trigger" data-popup="pop-sens-sim" aria-label="Sensitivity Info">i</button>
+                        </div>
+                        <p>Adjust evaluation weights (Price vs. Technical) to simulate how changes shift the winning bidder under Section 6.3.</p>
+                        <div class="slider-container">
+                            <div class="slider-val-box">
+                                <span class="slider-label">Price weight (%)</span>
+                                <span class="slider-val" id="sensPriceVal">70</span>
+                            </div>
+                            <input type="range" id="sensPriceRange" class="custom-range" min="50" max="90" value="70">
+                        </div>
+                        <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 12px;">Note: Technical weight is automatically calculated as (100 - Price weight).</div>
+                        <button class="btn btn-accent" id="btnSimSens" style="width: 100%;">Simulate Winner</button>
+                        <div id="sensResult" style="display: none; margin-top: 14px; flex-direction: column; gap: 8px;">
+                            <div>GenCo A (Low Price, Mid Tech) Total: <strong id="sensGencoATotal">--</strong></div>
+                            <div>GenCo B (High Price, High Tech) Total: <strong id="sensGencoBTotal">--</strong></div>
+                            <div style="border-top: 1px dashed var(--border-color); padding-top: 8px;">Simulated Winner: <strong id="sensWinner" style="color: #10B981;">--</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 39: GenCo Financial Leverage Ratios Auditor -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            GenCo Financial Leverage Ratios Auditor
+                            <button class="info-trigger" data-popup="pop-fin-ratio" aria-label="Ratio Info">i</button>
+                        </div>
+                        <p>Audit if a GenCo's financial leverage complies with the minimum 70:30 debt-to-equity ratio threshold under Appendix D-1.</p>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="ratioDebt" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Total Liabilities (Debt)</label>
+                            <input type="number" id="ratioDebt" class="form-control" value="700000" min="1">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="ratioEquity" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Total Shareholder Equity</label>
+                            <input type="number" id="ratioEquity" class="form-control" value="300000" min="1">
+                        </div>
+                        <button class="btn btn-accent" id="btnCalcRatio" style="width: 100%;">Audit Financial Ratio</button>
+                        <div id="ratioResult" style="display: none; margin-top: 14px; flex-direction: column; gap: 6px;">
+                            <div style="display: flex; justify-content: space-between;"><span>Debt-to-Equity Ratio:</span> <strong id="ratioVal">--</strong></div>
+                            <div style="display: flex; justify-content: space-between;"><span>Audit Finding:</span> <strong id="ratioStatus" style="color: var(--color-accent);">--</strong></div>
+                        </div>
+                    </div>
+
                     <!-- Feature 26: Multi-Criteria Weighted Evaluation Calculator -->
                     <div class="interactive-card">
                         <div class="card-title">
                             Weighted Bids Multi-Evaluator
                             <button class="info-trigger" data-popup="pop-weighted" aria-label="Weighted Info">i</button>
-                            <span class="card-badge">Tool 26</span>
                         </div>
                         <p>Simulate bid scoring based on a multi-criteria system (Price vs Technical reliability vs Environmental score).</p>
                         
@@ -700,7 +838,6 @@
                         <div class="card-title">
                             Fuel Indexation Simulator
                             <button class="info-trigger" data-popup="pop-fuel-sim" aria-label="Fuel Info">i</button>
-                            <span class="card-badge">Tool 32</span>
                         </div>
                         <p>Simulate how fuel commodity price fluctuations pass through to consumer generation tariffs. Apply ERC-enforced caps to protect consumers.</p>
                         
@@ -760,7 +897,6 @@
                         <div class="card-title">
                             Observer Letter & Sworn Undertaking Builder
                             <button class="info-trigger" data-popup="pop-observers" aria-label="Observer Protocols Info">i</button>
-                            <span class="card-badge">Tool 07</span>
                         </div>
                         <p>Enter the details below to generate a custom Sworn Undertaking template complying with Annex A guidelines.</p>
                         
@@ -796,7 +932,6 @@
                         <div class="card-title">
                             Observer Report Generator
                             <button class="info-trigger" data-popup="pop-observer-report" aria-label="Report Info">i</button>
-                            <span class="card-badge">Tool 28</span>
                         </div>
                         <p>Generate a structured independent CSP audit report that observers are required to file directly with the ERC after bid awarding.</p>
                         
@@ -836,7 +971,6 @@
                         <div class="card-title">
                             Simulated CSP Compliance Dashboard
                             <button class="info-trigger" data-popup="pop-dashboard" aria-label="Dashboard Info">i</button>
-                            <span class="card-badge">Tool 08</span>
                         </div>
                         
                         <div class="dash-grid">
@@ -893,25 +1027,66 @@
                         <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 10.3</span>
                     </div>
 
+                                        <!-- Feature 36: Peak vs Off-Peak Load Curve Analyzer -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Peak vs Off-Peak Load Curve Analyzer
+                            <button class="info-trigger" data-popup="pop-load-curve" aria-label="Load Info">i</button>
+                        </div>
+                        <p>Analyze utility daily load profiles to suggest the optimal contract dispatch type (Baseload vs Peaking) for the TOR.</p>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="peakLoadMw" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Daytime Peak Demand (MW)</label>
+                            <input type="number" id="peakLoadMw" class="form-control" value="120" min="1">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="baseLoadMw" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Midnight Base Demand (MW)</label>
+                            <input type="number" id="baseLoadMw" class="form-control" value="45" min="1">
+                        </div>
+                        <button class="btn btn-accent" id="btnAnalyzeLoad" style="width: 100%;">Analyze Load Profile</button>
+                        <div id="loadResult" style="display: none; margin-top: 14px; flex-direction: column; gap: 6px;">
+                            <div style="display: flex; justify-content: space-between;"><span>Peak-to-Base Ratio:</span> <strong id="loadRatio">--</strong></div>
+                            <div style="display: flex; justify-content: space-between;"><span>Contract Recommendation:</span> <strong id="loadRec" style="color: var(--color-accent);">--</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 38: WESM Secondary Price Cap (SPC) Trigger Auditor -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            WESM Secondary Price Cap (SPC) Trigger Auditor
+                            <button class="info-trigger" data-popup="pop-spc-trig" aria-label="SPC Info">i</button>
+                        </div>
+                        <p>Evaluate if rolling 72-hour price averages trigger the WESM Secondary Price Cap protection under IEMOP rules.</p>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="spcRollingAvg" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Rolling 72-Hour Average (PHP/kWh)</label>
+                            <input type="number" id="spcRollingAvg" class="form-control" value="8.50" step="0.01" min="1">
+                        </div>
+                        <button class="btn btn-accent" id="btnAuditSpc" style="width: 100%;">Audit SPC Trigger Status</button>
+                        <div id="spcAuditResult" style="font-weight: 800; font-size: 13px; text-align: center; margin-top: 10px; color: var(--color-accent);">INACTIVE</div>
+                    </div>
+
                     <!-- Feature 25: CSP Bidding Process Simulator -->
                     <div class="interactive-card">
                         <div class="card-title">
-                            CSP Bidding Process Simulator
+                            CSP Bidding Compliance Simulator
                             <button class="info-trigger" data-popup="pop-game" aria-label="Simulator Info">i</button>
-                            <span class="card-badge">Tool 25</span>
                         </div>
-                        <p>Simulate a mock bidding run as a distribution utility. Open bids, run audits, and evaluate compliance outcomes.</p>
+                        <p>Roleplay as the TPBAC Chairperson. Make compliant decisions at each bidding milestone to guide the procurement to a successful joint filing.</p>
                         
-                        <div class="game-container">
-                            <div style="margin-bottom: 12px;">
-                                <strong>Active Simulation Log:</strong>
+                        <div class="game-container" style="background-color: var(--bg-secondary); padding: 16px; border-radius: var(--border-radius-sm); border: var(--border-width) var(--border-style) var(--border-color); margin-bottom: 14px;">
+                            <div style="font-weight: 700; font-size: 11px; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px;" id="simStepLabel">Milestone 1: Observer Audit</div>
+                            <div id="simPrompt" style="font-size: 13.5px; line-height: 1.5; margin-bottom: 16px; min-height: 60px; font-weight: 600; color: var(--text-primary);">
+                                Bid opening day. Citizen Observers are present but one has NOT submitted their Annex A Sworn Undertaking. What do you do?
                             </div>
-                            <div class="game-log" id="gameLog">
-                                [System] Idle. Ready to simulate bid opening...
+                            
+                            <div id="simFeedback" style="display: none; padding: 12px; border-radius: var(--border-radius-sm); font-size: 12.5px; line-height: 1.5; margin-bottom: 16px; font-weight: 500;">
+                                <!-- Compliance feedback text -->
                             </div>
-                            <button class="btn btn-accent" id="gameRunBtn" style="width: 100%;">Trigger Bid Simulation</button>
+
+                            <div id="simButtons" style="display: flex; flex-direction: column; gap: 8px;">
+                                <!-- Dynamic choice buttons -->
+                            </div>
                         </div>
-                        <span class="citation-ref">Ref: ERC Section 4 standard bidding guidelines</span>
+                        <span class="citation-ref">Ref: ERC Section 4 & Section 9 Observer Guidelines</span>
                     </div>
                 </div>
             </section>
@@ -929,7 +1104,6 @@
                         <div class="card-title">
                             Captive Market PSA Eligibility Checker
                             <button class="info-trigger" data-popup="pop-res07-elig" aria-label="PSA Package Eligibility Info">i</button>
-                            <span class="card-badge">Tool 21</span>
                         </div>
                         <p>Verify if a DU-GenCo Power Supply Agreement package satisfies the core validation filters required for regulatory filing under Resolution No. 07 rules.</p>
                         
@@ -960,7 +1134,6 @@
                         <div class="card-title">
                             RPS Compliance Estimator
                             <button class="info-trigger" data-popup="pop-rps" aria-label="RPS Info">i</button>
-                            <span class="card-badge">Tool 30</span>
                         </div>
                         <p>Calculate the minimum capacity of Renewable Energy (RE) a DU must procure annually to meet the Renewable Portfolio Standards (RPS) mandate.</p>
                         
@@ -990,7 +1163,6 @@
                         <div class="card-title">
                             Outage & Penalty Calculator
                             <button class="info-trigger" data-popup="pop-outage-calc" aria-label="Outage Info">i</button>
-                            <span class="card-badge">Tool 33</span>
                         </div>
                         <p>Calculate allowed planned/unplanned outage limits and estimate liquidated damages / penalties for generation plants exceeding yearly thresholds.</p>
                         
@@ -1026,12 +1198,59 @@
                         <span class="citation-ref">Ref: ERC Guidelines on Contract Outage Allowances, Section 12</span>
                     </div>
 
+                                        <!-- Feature 37: CO2 Emissions Tariff Estimator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            CO2 Emissions Tariff Estimator
+                            <button class="info-trigger" data-popup="pop-co2-audit" aria-label="CO2 Info">i</button>
+                        </div>
+                        <p>Estimate potential carbon emission offset tariffs and penalties for fossil fuel generation under Section 6.3.</p>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="co2Tech" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Generation Technology</label>
+                            <select id="co2Tech" class="form-control">
+                                <option value="coal">Coal fired Thermal (High CO2)</option>
+                                <option value="gas">Natural Gas Combined Cycle (Mid CO2)</option>
+                                <option value="solar">Solar PV Sourced (Zero CO2)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="co2TaxRate" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Carbon Tax rate (PHP/Ton)</label>
+                            <input type="number" id="co2TaxRate" class="form-control" value="500" min="1">
+                        </div>
+                        <button class="btn btn-accent" id="btnCalcCo2" style="width: 100%;">Calculate Carbon Tariff</button>
+                        <div id="co2Results" style="display: none; margin-top: 14px; flex-direction: column; gap: 6px;">
+                            <div style="display: flex; justify-content: space-between;"><span>CO2 intensity (Kg/kWh):</span> <strong id="co2Intensity">--</strong></div>
+                            <div style="display: flex; justify-content: space-between;"><span>Estimated Carbon Levy:</span> <strong id="co2Levy" style="color: var(--color-accent);">--</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 40: Annual Energy Yield Calculator for Solar PSAs -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Annual Energy Yield Calculator for Solar PSAs
+                            <button class="info-trigger" data-popup="pop-yield-calc" aria-label="Yield Info">i</button>
+                        </div>
+                        <p>Calculate the expected annual generation yield of a solar facility based on capacity and panel degradation factors.</p>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="yieldMw" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Solar Plant Capacity (MW)</label>
+                            <input type="number" id="yieldMw" class="form-control" value="10" min="1">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 12px;">
+                            <label for="yieldSun" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Peak Sun Hours per Day</label>
+                            <input type="number" id="yieldSun" class="form-control" value="4.5" step="0.1" min="1">
+                        </div>
+                        <button class="btn btn-accent" id="btnCalcYield" style="width: 100%;">Calculate Energy Yield</button>
+                        <div id="yieldResults" style="display: none; margin-top: 14px; flex-direction: column; gap: 6px;">
+                            <div style="display: flex; justify-content: space-between;"><span>Annual Yield (MWh):</span> <strong id="yieldAnnualMwh">--</strong></div>
+                            <div style="display: flex; justify-content: space-between;"><span>Yield after 10 years:</span> <strong id="yield10YearMwh" style="color: var(--color-accent);">--</strong></div>
+                        </div>
+                    </div>
+
                     <!-- Feature 34: Market Price Reference (MPR) Benchmark Validator (Section 6.3) (New Feature 5/5) -->
                     <div class="interactive-card">
                         <div class="card-title">
                             MPR Benchmark Validator
                             <button class="info-trigger" data-popup="pop-mpr-val" aria-label="MPR Info">i</button>
-                            <span class="card-badge">Tool 34</span>
                         </div>
                         <p>Validate if your proposed PSA tariff rate matches or beats the ERC's published Market Price Reference (MPR) spot benchmark, computing lifetime consumer savings.</p>
                         
@@ -1073,13 +1292,11 @@
                 <h2>QA & REGULATORY GLOSSARY</h2>
                 <p>This chapter offers tools to help you search energy terms and ask regulatory compliance questions.</p>
 
-                <div class="grid-2">
                     <!-- Feature 9: Searchable Glossary of Regulatory Terms -->
                     <div class="interactive-card">
                         <div class="card-title">
                             Searchable Glossary Index
                             <button class="info-trigger" data-popup="pop-glossary" aria-label="Glossary Info">i</button>
-                            <span class="card-badge">Tool 09</span>
                         </div>
                         <div class="glossary-search-box">
                             <input type="text" id="glossarySearch" class="form-control" placeholder="Search regulatory terms (e.g. PSA, DU, GenCo)...">
@@ -1090,38 +1307,36 @@
                         <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 2</span>
                     </div>
 
-                    <!-- Feature 14: Q&A Assistant -->
+                <div class="grid-2">
+
+                                        <!-- Feature 42: Bid Bond Forfeiture Risk Assessor -->
                     <div class="interactive-card">
                         <div class="card-title">
-                            Simulated CSP Helper Assistant
-                            <button class="info-trigger" data-popup="pop-qa" aria-label="Q&A Assistant Info">i</button>
-                            <span class="card-badge">Tool 14</span>
+                            Bid Bond Forfeiture Risk Assessor
+                            <button class="info-trigger" data-popup="pop-bond-forfeit" aria-label="Forfeit Info">i</button>
                         </div>
-                        <div class="qa-chatbox">
-                            <div class="qa-messages" id="qaMessages">
-                                <div class="qa-msg bot">Hello! I am your regulatory guide assistant. Select a preset question below or type your inquiry regarding the 2026 Amended CSP rules.</div>
-                            </div>
-                            <div class="qa-suggestions">
-                                <button class="qa-suggest-btn" data-q="What is the maximum timeline for a CSP?">Timeline Limit</button>
-                                <button class="qa-suggest-btn" data-q="Who is responsible for filing the PSA application?">Who Files PSA?</button>
-                                <button class="qa-suggest-btn" data-q="What happens if the timeline is violated?">Timeline Violations</button>
-                            </div>
-                            <div class="qa-input-area">
-                                <input type="text" id="qaInput" class="qa-input" placeholder="Type a regulatory question...">
-                                <button class="qa-send-btn" id="qaSendBtn">Send</button>
-                            </div>
+                        <p>Audit if a bidding GenCo faces risk of bid bond forfeiture under Appendix C2 instructions.</p>
+                        <div class="check-row" style="margin-bottom: 8px;">
+                            <input type="checkbox" id="chkBondWithdraw">
+                            <label for="chkBondWithdraw" style="font-size: 12px;">GenCo withdraws its bid after the submission deadline</label>
                         </div>
-                        <span class="citation-ref">Ref: CSP Regulatory QA Database</span>
+                        <div class="check-row" style="margin-bottom: 8px;">
+                            <input type="checkbox" id="chkBondRefuse">
+                            <label for="chkBondRefuse" style="font-size: 12px;">Winning bidder refuses to sign the executed PSA within 120 days</label>
+                        </div>
+                        <div class="check-row" style="margin-bottom: 12px;">
+                            <input type="checkbox" id="chkBondLate">
+                            <label for="chkBondLate" style="font-size: 12px;">GenCo fails to submit supplementary clarifications on time</label>
+                        </div>
+                        <button class="btn btn-accent" id="btnAuditBond" style="width: 100%;">Audit Forfeiture Risk</button>
+                        <div id="bondAuditResult" style="font-weight: 800; font-size: 13px; text-align: center; margin-top: 10px; color: var(--color-accent);">NO RISK</div>
                     </div>
-                </div>
 
-                <div class="grid-2">
                     <!-- Feature 24: CSP External Links Portal -->
                     <div class="interactive-card">
                         <div class="card-title">
                             Regulatory Links Portal
                             <button class="info-trigger" data-popup="pop-links" aria-label="Links Info">i</button>
-                            <span class="card-badge">Tool 24</span>
                         </div>
                         <p>Browse external regulatory documents, guidelines, and compliance postings directly related to Philippine CSP rules.</p>
                         
@@ -1154,24 +1369,56 @@
                     <!-- Feature 27: WESM Spot Price Simulator -->
                     <div class="interactive-card">
                         <div class="card-title">
-                            WESM Spot Market Simulator
+                            WESM Spot Market Simulator (IEMOP Mode)
                             <button class="info-trigger" data-popup="pop-wesm" aria-label="WESM Info">i</button>
-                            <span class="card-badge">Tool 27</span>
                         </div>
-                        <p>Simulate pricing fluctuations in the Wholesale Electricity Spot Market (WESM) to evaluate long-term PSA hedges.</p>
+                        <p>Simulate pricing fluctuations in the Wholesale Electricity Spot Market (WESM) based on regional grids and supply margins, auditing contract hedge values.</p>
                         
-                        <div class="wesm-chart-mock">
-                            <div class="wesm-bar" style="height: 40%;" id="wBar0"><div class="wesm-bar-lbl">00:00</div></div>
-                            <div class="wesm-bar" style="height: 35%;" id="wBar1"><div class="wesm-bar-lbl">04:00</div></div>
-                            <div class="wesm-bar peak" style="height: 80%;" id="wBar2"><div class="wesm-bar-lbl">08:00</div></div>
-                            <div class="wesm-bar peak" style="height: 90%;" id="wBar3"><div class="wesm-bar-lbl">12:00</div></div>
-                            <div class="wesm-bar peak" style="height: 85%;" id="wBar4"><div class="wesm-bar-lbl">16:00</div></div>
-                            <div class="wesm-bar peak" style="height: 95%;" id="wBar5"><div class="wesm-bar-lbl">20:00</div></div>
-                            <div class="wesm-bar" style="height: 50%;" id="wBar6"><div class="wesm-bar-lbl">24:00</div></div>
+                        <div class="grid-2" style="margin-bottom: 16px; gap: 12px;">
+                            <div>
+                                <label for="wesmRegion" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">Regional Grid</label>
+                                <select id="wesmRegion" class="form-control">
+                                    <option value="Luzon">Luzon (Large Demand)</option>
+                                    <option value="Visayas">Visayas (Interconnected Constraints)</option>
+                                    <option value="Mindanao">Mindanao (High Hydro Capacity)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="wesmMargin" style="font-size: 11px; font-weight: 700; text-transform: uppercase;">IEMOP Supply Margin</label>
+                                <select id="wesmMargin" class="form-control">
+                                    <option value="normal">Normal (Adequate Supply)</option>
+                                    <option value="tight">Tight (Yellow Alert outages)</option>
+                                    <option value="scarce">Scarcity (Red Alert spikes)</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <button class="btn btn-accent" id="wesmSimBtn" style="width: 100%;">Trigger Spot Price Shift</button>
-                        <span class="citation-ref">Ref: WESM Spot Market Rules, Chapter 3</span>
+                        <div class="check-row" style="margin-bottom: 16px;">
+                            <input type="checkbox" id="wesmSpc" checked>
+                            <label for="wesmSpc" style="font-size: 13px; font-weight: 600;">Enable WESM Secondary Price Cap (PHP 7.42/kWh)</label>
+                        </div>
+
+                        <div class="wesm-chart-mock" id="wesmChartContainer" style="height: 180px; margin-bottom: 20px; display: flex; align-items: flex-end; justify-content: space-between; gap: 8px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px;">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+
+                        <div class="grid-3" style="margin-bottom: 16px; gap: 10px; background-color: var(--bg-secondary); padding: 12px; border-radius: var(--border-radius-sm); border: var(--border-width) var(--border-style) var(--border-color);">
+                            <div style="text-align: center;">
+                                <div style="font-size: 9px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Simulated GWAP</div>
+                                <div class="calc-result" id="wesmGwap" style="font-size: 16px; margin-top: 4px;">PHP 4.50</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 9px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Max Peak Price</div>
+                                <div class="calc-result" id="wesmPeak" style="font-size: 16px; margin-top: 4px; color: var(--color-accent);">PHP 7.42</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 9px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Hedge Value (10MW)</div>
+                                <div class="calc-result" id="wesmHedge" style="font-size: 16px; margin-top: 4px; color: #10B981;">+PHP 12K</div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-accent" id="wesmSimBtn" style="width: 100%;">Calculate Spot Market Run</button>
+                        <span class="citation-ref">Ref: IEMOP WESM Market Rules & ERC Resolution (effective Dec 31, 2025 setting CPT at PHP 12,413/MWh and SPC at PHP 7,423/MWh).</span>
                     </div>
                 </div>
             </section>
@@ -1188,7 +1435,6 @@
                         <div class="card-title">
                             Compliance Assessment Quiz
                             <button class="info-trigger" data-popup="pop-quiz" aria-label="Quiz Info">i</button>
-                            <span class="card-badge">Tool 10</span>
                         </div>
                         <div class="quiz-box">
                             <div class="quiz-question" id="qQuestion">Question will load here...</div>
@@ -1211,7 +1457,6 @@
                         <div class="card-title">
                             Visual 10-Phase Stepper
                             <button class="info-trigger" data-popup="pop-stepper" aria-label="Phases Stepper Info">i</button>
-                            <span class="card-badge">Tool 11</span>
                         </div>
                         <p>Click on any phase to view details about the procurement milestones.</p>
                         <div class="stepper" id="stepperContainer">
@@ -1251,19 +1496,6 @@
                 </ul>
             </div>
             
-            <!-- Feature 20: Feedback & Inquiry Hub (Contact Form) -->
-            <div class="footer-col" id="feedbackHubCol">
-                <h5>Regulatory Inquiry Hub <button class="info-trigger" data-popup="pop-feedback-form" aria-label="Inquiry Info">i</button></h5>
-                <form id="feedbackForm">
-                    <div class="form-group" style="margin-bottom: 12px;">
-                        <input type="email" id="feedEmail" class="form-control" placeholder="Your Email Address" style="padding: 10px 14px; font-size: 13px;" required>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 12px;">
-                        <textarea id="feedMessage" class="form-control" rows="3" placeholder="Describe your inquiry..." style="padding: 10px 14px; font-size: 13px; height: 70px;" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-accent btn-outline" style="padding: 10px 20px; font-size: 13px; width: 100%;">Submit Inquiry</button>
-                </form>
-            </div>
         </div>
         <div class="footer-bottom">
             <div>© 2026 | ERC CSP Guidelines | Educational Clone portal</div>
