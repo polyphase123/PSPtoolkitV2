@@ -379,35 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bidRateRange.addEventListener('input', runSimulation);
     runSimulation();
 
-    // ==========================================
-    // 9. Document Download Simulator (Feature 17)
-    // ==========================================
-    document.querySelectorAll('.download-action-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const fileName = btn.getAttribute('data-file');
-            btn.textContent = "Downloading...";
-            btn.style.opacity = "0.7";
-            btn.disabled = true;
 
-            setTimeout(() => {
-                const mockBlob = new Blob([`Regulatory Template: ${fileName}\n\nAmended ERC CSP 2026 Guidelines compliance template.`], {type: 'text/plain'});
-                const url = URL.createObjectURL(mockBlob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = fileName;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-
-                btn.textContent = "Download";
-                btn.style.opacity = "1";
-                btn.disabled = false;
-
-                showModal("Download Complete", `Standardized template <strong>${fileName}</strong> downloaded successfully for formatting.`);
-            }, 1000);
-        });
-    });
 
     // ==========================================
     // 10. Bid Document Fee Estimator (Feature 12)
