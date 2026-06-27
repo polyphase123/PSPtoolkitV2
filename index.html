@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive digital compliance guide for the 2026 Amended ERC CSP Guidelines (Resolution No. 07, Series of 2026) for electricity supply to captive markets. Built with regulator tools.">
+    <title>Compliance Guide | ERC CSP Guidelines 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator (Feature 16) -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                CSP<span>//2026</span>
+            </a>
+            <div class="nav-links">
+                <a href="#milestones" class="nav-link">Timeline</a>
+                <a href="#exemptions" class="nav-link">Exemptions</a>
+                <a href="#checklist" class="nav-link">Filing</a>
+                <a href="#evaluation" class="nav-link">Evaluation</a>
+                <a href="#resolution-guidelines" class="nav-link">Resolution 07</a>
+                <a href="#qa-glossary" class="nav-link">Glossary</a>
+
+            </div>
+            <button class="hamburger" id="mobMenuBtn" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Area (Improved Edge Studio Style Bold Statement) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Implementing Guide:<br><span>Amended ERC CSP 2026</span></h1>
+            <p>A comprehensive, interactive handbook for DUs, GenCos, and CSP Observers. Step-by-step navigation through ERC Resolution No. 07, Series of 2026, governing captive market power supply agreements.</p>
+            <a href="#introduction" class="btn btn-accent">Explore the Handbook</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-num">180</span>
+                <span class="stat-label">Max Calendar Days</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">35</span>
+                <span class="stat-label">Interactive Features</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">10</span>
+                <span class="stat-label">Appendix Attachments</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Filing Compliance</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section with Sidebar Nav & Content Panel -->
+    <main class="main-layout">
+        
+        <!-- Sticky Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Handbook Chapters</h3>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item active" data-section="introduction"><a href="#introduction">Introduction <span class="num">01</span></a></li>
+                <li class="sidebar-item" data-section="milestones"><a href="#milestones">Timeline & Milestones <span class="num">02</span></a></li>
+                <li class="sidebar-item" data-section="exemptions"><a href="#exemptions">CSP Exemptions <span class="num">03</span></a></li>
+                <li class="sidebar-item" data-section="appendix-docs"><a href="#appendix-docs">Documents & Forms <span class="num">04</span></a></li>
+                <li class="sidebar-item" data-section="joint-filing"><a href="#joint-filing">Joint PSA Filing <span class="num">05</span></a></li>
+                <li class="sidebar-item" data-section="evaluation"><a href="#evaluation">Bid Evaluation <span class="num">06</span></a></li>
+                <li class="sidebar-item" data-section="observers"><a href="#observers">Observer Protocols <span class="num">07</span></a></li>
+                <li class="sidebar-item" data-section="live-monitor"><a href="#live-monitor">Live CSP Monitor <span class="num">08</span></a></li>
+                <li class="sidebar-item" data-section="resolution-guidelines"><a href="#resolution-guidelines">Resolution 07 Focus <span class="num">09</span></a></li>
+                <li class="sidebar-item" data-section="qa-glossary"><a href="#qa-glossary">QA & Glossary <span class="num">10</span></a></li>
+                <li class="sidebar-item" data-section="knowledge-test"><a href="#knowledge-test">Compliance Test <span class="num">11</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Panel -->
+        <div class="content-panel">
+
+            <!-- PINNED TO TOP: Compliance Sidequest of Engr. Franz Xyrlo I. Tobias, PEE -->
+            <div class="interactive-card pinned-sidequest" id="tobias-sidequest">
+                <div class="card-title" style="border-bottom: none; padding-bottom: 0;">
+                    Featured Compliance Spotlight
+                    <button class="info-trigger" data-popup="pop-sidequest" aria-label="Sidequest Info">i</button>
+                </div>
+                <div class="sidequest-header">
+                    <div class="sidequest-avatar">FT</div>
+                    <div class="sidequest-meta">
+                        <h4>Engr. Franz Xyrlo I. Tobias, PEE</h4>
+                        <span>Principal Professional Electrical Engineer | Grid Compliance Consultant</span>
+                    </div>
+                </div>
+                <div class="sidequest-body">
+                    <p><strong>Compliance Sidequest:</strong> Engr. Tobias, PEE successfully led the technical grid audit and joint filing compliance for a high-priority 45 MW Solar Power Supply Agreement in Southern Luzon, satisfying the Philippine Grid Code and the 2026 Amended Guidelines.</p>
+                    
+                    <div class="sidequest-stats">
+                        <div class="sq-stat">
+                            <span class="sq-stat-num">45 MW</span>
+                            <span class="sq-stat-lbl">Solar Sourced</span>
+                        </div>
+                        <div class="sq-stat">
+                            <span class="sq-stat-num">135 Days</span>
+                            <span class="sq-stat-lbl">CSP Cycle Time</span>
+                        </div>
+                        <div class="sq-stat">
+                            <span class="sq-stat-num">APPROVED</span>
+                            <span class="sq-stat-lbl">ERC Audit Status</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-accent" id="sqUnlockBtn" style="width: 100%; justify-content: center;">Unlock Engineering Methodology</button>
+                </div>
+                <span class="citation-ref">Ref: Professional Regulation Commission (PRC) PEE License Audit Standards</span>
+            </div>
+
+            <!-- Chapter 01: Introduction -->
+            <section id="introduction" class="guide-section">
+                <div class="section-tag">Chapter 01</div>
+                <h2>Overview of the 2026 Amended CSP Rules</h2>
+                <p>On April 1, 2026, the Energy Regulatory Commission (ERC) enacted the <strong>Amended Implementing Guidelines for the Procurement, Execution, and Evaluation of Power Supply Agreements (PSAs)</strong> under Resolution No. 07, Series of 2026.</p>
+                <p>This amendment introduces structural transparency to distribution utilities (DUs) procuring electricity. By integrating strict timelines, joint DU-GenCo filing responsibilities, and citizen observers, the ERC guarantees that all contracts align with the principles of least-cost supply and fair market competition.</p>
+                
+                <div class="callout">
+                    <h4>Regulatory Foundation <button class="info-trigger" data-popup="pop-intro-callout" aria-label="Intro Info">i</button></h4>
+                    <p>All Power Supply Agreements entered into by Distribution Utilities for their captive market must go through a Competitive Selection Process (CSP) unless specifically exempted under guidelines defined in Department of Energy (DOE) circulars.</p>
+                    <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 1 & Section 3</span>
+                </div>
+            </section>
+
+            <!-- Chapter 02: Timeline & Milestones -->
+            <section id="milestones" class="guide-section">
+                <div class="section-tag">Chapter 02</div>
+                <h2>TIMELINE & MILESTONES</h2>
+                <p>Timelines under the 2026 guidelines are strictly binding. The entire CSP process, starting from the first publication of the Invitation to Bid (ITB) up to the final execution/award of the contract, must be completed within <strong>180 calendar days</strong>. DUs that exceed this timeline face automatic penalties and risks of PSA disapproval.</p>
+                
+                <div class="grid-2">
+                    <!-- Feature 1: Milestone Timeline Calculator -->
+                    <div class="interactive-card" id="milestone-calc-widget">
+                        <div class="card-title">
+                            Milestone Deadline Calculator
+                            <button class="info-trigger" data-popup="pop-timeline" aria-label="Timeline Info">i</button>
+                            <span class="card-badge">Tool 01</span>
+                        </div>
+                        <p>Input the date of your First Publication of the Invitation to Bid to calculate regulatory deadlines for all core milestones under the 180-day guidelines.</p>
+                        
+                        <div class="form-group">
+                            <label for="bidStartDate" class="form-label">First Bid Publication Date <button class="info-trigger" data-popup="pop-timeline-date" aria-label="Date Info">i</button></label>
+                            <input type="date" id="bidStartDate" class="form-control">
+                        </div>
+                        
+                        <button class="btn btn-accent" id="calcMilestonesBtn">Compute Milestones</button>
+                        
+                        <div class="milestone-results" id="milestoneResults" style="display: none;">
+                            <div class="milestone-item">
+                                <div>
+                                    <div class="milestone-name">Pre-Bid Conference Deadline</div>
+                                    <div class="milestone-days">(Max 20 days from publication)</div>
+                                </div>
+                                <div class="milestone-date" id="mPrebid">--</div>
+                            </div>
+                            <div class="milestone-item">
+                                <div>
+                                    <div class="milestone-name">Bid Submission & Opening</div>
+                                    <div class="milestone-days">(Max 45 days from publication)</div>
+                                </div>
+                                <div class="milestone-date" id="mSubmission">--</div>
+                            </div>
+                            <div class="milestone-item">
+                                <div>
+                                    <div class="milestone-name">Post-Qualification Report</div>
+                                    <div class="milestone-days">(Max 75 days from publication)</div>
+                                </div>
+                                <div class="milestone-date" id="mPostQual">--</div>
+                            </div>
+                            <div class="milestone-item deadline-critical">
+                                <div>
+                                    <div class="milestone-name">Contract Award & Signing</div>
+                                    <div class="milestone-days">(Max 120 days from publication)</div>
+                                </div>
+                                <div class="milestone-date" id="mAward">--</div>
+                            </div>
+                            <div class="milestone-item deadline-critical">
+                                <div>
+                                    <div class="milestone-name">Joint Filing with ERC</div>
+                                    <div class="milestone-days">(Strict Max 180 days limit)</div>
+                                </div>
+                                <div class="milestone-date" id="mFiling">--</div>
+                            </div>
+                            <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 5 & Appendix B</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 29: CSP Timeline Breach Fines Estimator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Breach Penalties Estimator
+                            <button class="info-trigger" data-popup="pop-breach" aria-label="Breach Info">i</button>
+                            <span class="card-badge">Tool 29</span>
+                        </div>
+                        <p>Calculate estimated administrative fines for distribution utilities violating the mandatory CSP timelines.</p>
+                        
+                        <div class="form-group">
+                            <label for="breachType" class="form-label">Type of Timeline Infraction</label>
+                            <select id="breachType" class="form-control">
+                                <option value="minor">Delay in Pre-Bid Publication (1-10 days)</option>
+                                <option value="major">Exceeding 180-day Joint Filing limit</option>
+                                <option value="critical">Conducting negotiated contract without exemption approval</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="duDemand" class="form-label">DU Captive Peak Demand (MW)</label>
+                            <input type="number" id="duDemand" class="form-control" placeholder="e.g. 50" min="1">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <span>Estimated Penalty Fine:</span>
+                            <div class="calc-result" id="breachFineResult">PHP 0.00</div>
+                        </div>
+
+                        <button class="btn btn-accent" id="calcBreachBtn">Compute Penalty</button>
+                        <span class="citation-ref">Ref: ERC Guidelines on Administrative Sanctions, Section 15</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 03: CSP Exemptions -->
+            <section id="exemptions" class="guide-section">
+                <div class="section-tag">Chapter 03</div>
+                <h2>CSP EXEMPTIONS</h2>
+                <p>Not all power procurements require a full competitive selection process. The guidelines authorize distribution utilities to procure power through negotiated contracts under highly specific exemptions. This chapter guides distribution utilities through these conditions to prevent legal issues or application rejections.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 2: CSP Exemption Wizard -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Exemption Eligibility Wizard
+                            <button class="info-trigger" data-popup="pop-exemptions" aria-label="Exemption Info">i</button>
+                            <span class="card-badge">Tool 02</span>
+                        </div>
+                        <div class="wizard-box" id="exemptionWizard">
+                            <div class="wizard-question" id="wizardQuestion">Loading wizard...</div>
+                            <div class="wizard-choices" id="wizardChoices"></div>
+                            <div class="wizard-result" id="wizardResult" style="display: none;"></div>
+                            <div class="wizard-actions">
+                                <button class="btn btn-outline" id="wizardPrev" style="display: none;">Back</button>
+                                <button class="btn" id="wizardReset" style="display: none;">Restart</button>
+                            </div>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 7 & DOE DC2023-06-0021</span>
+                    </div>
+
+                    <!-- Feature 3: Before vs After Matrix -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Regulatory Matrix (Before vs After 2026)
+                            <button class="info-trigger" data-popup="pop-matrix" aria-label="Matrix Info">i</button>
+                            <span class="card-badge">Tool 03</span>
+                        </div>
+                        <p>Compare previous rules with the new 2026 Amended Guidelines.</p>
+                        <div class="matrix-table-container">
+                            <table class="matrix-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>Old Rules <button class="info-trigger" data-popup="pop-matrix-old" aria-label="Old Rules Info">i</button></th>
+                                        <th>2026 Rules <button class="info-trigger" data-popup="pop-matrix-new" aria-label="New Rules Info">i</button></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="matrix-topic">Filing Party</td>
+                                        <td class="matrix-old">DU files alone</td>
+                                        <td class="matrix-new">Joint DU & GenCo Filing</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="matrix-topic">Timelines</td>
+                                        <td class="matrix-old">Flexible periods</td>
+                                        <td class="matrix-new">Strict 180-day limit</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="matrix-topic">Observers</td>
+                                        <td class="matrix-old">Optional invites</td>
+                                        <td class="matrix-new">Mandatory compliance</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span class="citation-ref">Ref: Resolution No. 07 Comparative Annexes</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 04: Documents & Forms -->
+            <section id="appendix-docs" class="guide-section">
+                <div class="section-tag">Chapter 04</div>
+                <h2>ANNEXES & APPENDICES EXPLORER</h2>
+                <p>The resolution contains a suite of templates, checklists, and forms designed to standardize documents. Understanding these attachments is key to preparing your filing packages.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 4: Annex & Appendix Explorer -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Appendix & Annex Database
+                            <button class="info-trigger" data-popup="pop-docs" aria-label="Documents Info">i</button>
+                            <span class="card-badge">Tool 04</span>
+                        </div>
+                        <div class="explorer-filters">
+                            <input type="text" id="explorerSearch" class="form-control" placeholder="Search appendices (e.g. Annex A, Appendix B)...">
+                        </div>
+                        <div class="explorer-grid" id="explorerGrid">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                        <span class="citation-ref">Ref: Resolution No. 07, Table of Appendices</span>
+                    </div>
+
+                    <!-- Feature 17: Document Download Simulator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Filing Template Download Hub
+                            <button class="info-trigger" data-popup="pop-download" aria-label="Download Info">i</button>
+                            <span class="card-badge">Tool 17</span>
+                        </div>
+                        <p>Simulate download of standardized templates for your ERC joint applications.</p>
+                        <div class="download-list">
+                            <div class="download-item">
+                                <div class="download-info">
+                                    <h5>Annex A: Observer Sworn Undertaking</h5>
+                                    <span>PDF | 280 KB <button class="info-trigger" data-popup="pop-dl-annexa" aria-label="Annex A Download Info">i</button></span>
+                                </div>
+                                <button class="download-action-btn" data-file="Annex A_Observer_Undertaking.pdf">
+                                    Download
+                                </button>
+                            </div>
+                            <div class="download-item">
+                                <div class="download-info">
+                                    <h5>Appendix C1: Standard Terms of Reference</h5>
+                                    <span>DOCX | 420 KB <button class="info-trigger" data-popup="pop-dl-c1" aria-label="C1 Download Info">i</button></span>
+                                </div>
+                                <button class="download-action-btn" data-file="Appendix_C1_Terms_of_Reference.docx">
+                                    Download
+                                </button>
+                            </div>
+                            <div class="download-item">
+                                <div class="download-info">
+                                    <h5>Appendix F: Joint Application Checklist</h5>
+                                    <span>XLSX | 1.1 MB <button class="info-trigger" data-popup="pop-dl-appf" aria-label="App F Download Info">i</button></span>
+                                </div>
+                                <button class="download-action-btn" data-file="Appendix_F_Joint_Application_Checklist.xlsx">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Forms Registry 2026</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 05: Joint PSA Filing -->
+            <section id="joint-filing" class="guide-section">
+                <div class="section-tag">Chapter 05</div>
+                <h2>JOINT PSA FILING & COMMITTEE PROCEDURES</h2>
+                <p>One of the most important amendments in Resolution No. 07, Series of 2026, is that the DU and winning GenCo must <strong>jointly file</strong> the PSA application for ERC approval. This shares the burden of compliance, as both parties are responsible for document authenticity and adherence to guidelines.</p>
+
+                <div class="grid-3">
+                    <!-- Feature 5: Joint PSA Filing Checklist -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Joint Application Progress Tracker
+                            <button class="info-trigger" data-popup="pop-joint" aria-label="Joint Filing Info">i</button>
+                            <span class="card-badge">Tool 05</span>
+                        </div>
+                        <p>Track your filing preparation status. Your inputs are saved automatically to local storage.</p>
+                        <div class="checklist-progress-outer">
+                            <div class="checklist-progress-inner" id="checklistProgress"></div>
+                        </div>
+                        <div class="checklist-container" id="jointChecklist">
+                            <div class="checklist-item" data-id="1">
+                                <div class="checklist-checkbox"></div>
+                                <span class="checklist-text">DOE-approved Power Supply Procurement Plan (PSPP)</span>
+                            </div>
+                            <div class="checklist-item" data-id="2">
+                                <div class="checklist-checkbox"></div>
+                                <span class="checklist-text">Original executed PSA signed by both DU and GenCo</span>
+                            </div>
+                            <div class="checklist-item" data-id="3">
+                                <div class="checklist-checkbox"></div>
+                                <span class="checklist-text">Board Resolutions authorizing the PSA signatories</span>
+                            </div>
+                            <div class="checklist-item" data-id="4">
+                                <div class="checklist-checkbox"></div>
+                                <span class="checklist-text">Proof of CSP conduct (ITB publications, Bid opening records)</span>
+                            </div>
+                            <div class="checklist-item" data-id="5">
+                                <div class="checklist-checkbox"></div>
+                                <span class="checklist-text">Observer compliance forms and reports (Annex A / Annex B)</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline" id="resetChecklistBtn" style="margin-top: 15px; width: 100%;">Reset Tracker</button>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 10 & Appendix A</span>
+                    </div>
+
+                    <!-- Feature 12: Bidding Document Fee Estimator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Bid Document Fee Estimator
+                            <button class="info-trigger" data-popup="pop-fee" aria-label="Fee Info">i</button>
+                            <span class="card-badge">Tool 12</span>
+                        </div>
+                        <p>Calculate the estimated maximum bid document fee that a DU can charge bidding generation companies based on the procurement capacity size.</p>
+                        <div class="form-group">
+                            <label for="capacityMw" class="form-label">Procurement Capacity (in MW) <button class="info-trigger" data-popup="pop-fee-mw" aria-label="Capacity Fee Info">i</button></label>
+                            <input type="number" id="capacityMw" class="form-control" placeholder="e.g. 50" min="1">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <span>Estimated Fee Limit:</span>
+                            <div class="calc-result" id="feeResult">PHP 0.00</div>
+                        </div>
+                        <button class="btn btn-accent" id="calcFeeBtn" style="width: 100%;">Estimate Fee Limit</button>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 4.5</span>
+                    </div>
+
+                    <!-- Feature 22: PEE Joint Certification Checklist -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            PEE Certification Audit
+                            <button class="info-trigger" data-popup="pop-pee-audit" aria-label="PEE Audit Info">i</button>
+                            <span class="card-badge">Tool 22</span>
+                        </div>
+                        <p>Validate if all grid connection documents bear the mandatory signature of a Professional Electrical Engineer (PEE).</p>
+                        
+                        <div class="checklist-container">
+                            <div class="check-row">
+                                <input type="checkbox" id="chkPeeGis">
+                                <label for="chkPeeGis">Grid Impact Study (GIS) certified <button class="info-trigger" data-popup="pop-pee-gis" aria-label="GIS Info">i</button></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="chkPeeSld">
+                                <label for="chkPeeSld">Single-Line Diagram (SLD) signed <button class="info-trigger" data-popup="pop-pee-sld" aria-label="SLD Info">i</button></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="chkPeeCompl">
+                                <label for="chkPeeCompl">PEE Compliance Certification <button class="info-trigger" data-popup="pop-pee-cert" aria-label="PEE Cert Info">i</button></label>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <span>PEE Audit Status:</span>
+                            <div class="calc-result" id="peeAuditStatus">INCOMPLETE</div>
+                        </div>
+                        <span class="citation-ref">Ref: Philippine Grid Code 2016, Chapter 4</span>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <!-- Feature 31: TPBAC Composition Auditor (Section 4.2) (New Feature 1/5) -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            TPBAC Composition Auditor
+                            <button class="info-trigger" data-popup="pop-tpbac-audit" aria-label="TPBAC Audit Info">i</button>
+                            <span class="card-badge">Tool 31</span>
+                        </div>
+                        <p>Audit the composition of your Third Party Bids and Awards Committee. Regulators require exactly 5 members: 2 DU reps and 3 independent delegates.</p>
+                        
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="tpbacSeat1" class="form-label">DU Seat 1 (Technical) <button class="info-trigger" data-popup="pop-tpbac-s1" aria-label="Seat 1 Info">i</button></label>
+                                <select id="tpbacSeat1" class="form-control">
+                                    <option value="invalid">Select Role...</option>
+                                    <option value="du_tech">DU Technical Member (EE/PEE)</option>
+                                    <option value="du_fin">DU Finance Officer</option>
+                                    <option value="ind_cons">Independent Consumer Representative</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tpbacSeat2" class="form-label">DU Seat 2 (Finance)</label>
+                                <select id="tpbacSeat2" class="form-control">
+                                    <option value="invalid">Select Role...</option>
+                                    <option value="du_tech">DU Technical Member (EE/PEE)</option>
+                                    <option value="du_fin">DU Finance Officer</option>
+                                    <option value="ind_bus">Independent Business Delegate</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="tpbacSeat3" class="form-label">Independent Seat 3 (Consumers)</label>
+                                <select id="tpbacSeat3" class="form-control">
+                                    <option value="invalid">Select Role...</option>
+                                    <option value="du_tech">DU Technical Member (EE/PEE)</option>
+                                    <option value="ind_cons">Independent Consumer Representative</option>
+                                    <option value="ind_acad">Academic / Legal Expert</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tpbacSeat4" class="form-label">Independent Seat 4 (Business)</label>
+                                <select id="tpbacSeat4" class="form-control">
+                                    <option value="invalid">Select Role...</option>
+                                    <option value="du_fin">DU Finance Officer</option>
+                                    <option value="ind_bus">Independent Business Delegate</option>
+                                    <option value="ind_acad">Academic / Legal Expert</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="tpbacSeat5" class="form-label">Independent Seat 5 (Academic/Legal)</label>
+                            <select id="tpbacSeat5" class="form-control">
+                                <option value="invalid">Select Role...</option>
+                                <option value="du_board">DU Board Director</option>
+                                <option value="ind_cons">Independent Consumer Representative</option>
+                                <option value="ind_acad">Academic / Legal Expert</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <span>Auditor Status:</span>
+                            <div class="calc-result" id="tpbacAuditStatus">INVALID COMPOSITION</div>
+                        </div>
+
+                        <button class="btn btn-accent" id="btnAuditTpbac" style="width: 100%;">Audit Committee Compliance</button>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 4.2</span>
+                    </div>
+
+                    <!-- Feature 35: Post-Filing Case Hearing Tracker (Section 10.4) (New Feature 2/5) -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Post-Filing Hearing Tracker
+                            <button class="info-trigger" data-popup="pop-hearing-tracker" aria-label="Tracker Info">i</button>
+                            <span class="card-badge">Tool 35</span>
+                        </div>
+                        <p>Track the mandatory legal steps, public consultations, and evidentiary hearings after your joint PSA is filed with the ERC.</p>
+                        
+                        <div class="hearing-stepper" id="hearingStepper">
+                            <div class="hearing-step active" data-phase="1">
+                                <div class="hearing-bullet"></div>
+                                <h5>Phase 1: Case Filing & Intake</h5>
+                                <p>DU and GenCo submit the joint application package under Appendix A. ERC checks completeness and issues a Docket Number.</p>
+                            </div>
+                            <div class="hearing-step" data-phase="2">
+                                <div class="hearing-bullet"></div>
+                                <h5>Phase 2: Jurisdictional Requirements</h5>
+                                <p>ERC issues an Order of Hearing. DU must publish this notice in general circulation newspapers once a week for two consecutive weeks.</p>
+                            </div>
+                            <div class="hearing-step" data-phase="3">
+                                <div class="hearing-bullet"></div>
+                                <h5>Phase 3: Expository Presentation</h5>
+                                <p>Public presentation explaining the PSA rate components. Captive consumers can file formal petitions or interventions.</p>
+                            </div>
+                            <div class="hearing-step" data-phase="4">
+                                <div class="hearing-bullet"></div>
+                                <h5>Phase 4: Evidentiary Hearings</h5>
+                                <p>Cross-examinations of utility planners and generation engineers by ERC lawyers to audit technical and financial assumptions.</p>
+                            </div>
+                            <div class="hearing-step" data-phase="5">
+                                <div class="hearing-bullet"></div>
+                                <h5>Phase 5: Submission of Briefs</h5>
+                                <p>Parties submit their final summaries and arguments. ERC takes the case under advisement for rate computation audits.</p>
+                            </div>
+                        </div>
+
+                        <div id="hearingStepDetails" style="margin-top: 15px; font-size: 12px; color: var(--text-muted);">
+                            Click on any step above to view the checklist responsibilities.
+                        </div>
+                        <span class="citation-ref">Ref: ERC Rules of Practice and Procedure, Section 10.4</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 06: Bid Evaluation -->
+            <section id="evaluation" class="guide-section">
+                <div class="section-tag">Chapter 06</div>
+                <h2>BID EVALUATION & PRICE INDEXATIONS</h2>
+                <p>The bid evaluation process must follow transparent rules. Terms of Reference must state a **ceiling price** (or Reserve Price). GenCos submit technical and financial bids, which are evaluated by the DU's Third Party Bids and Awards Committee (TPBAC) using standard criteria.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 6: Ceiling Price Simulator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Bid Rates comparison Simulator
+                            <button class="info-trigger" data-popup="pop-ceiling" aria-label="Ceiling Price Info">i</button>
+                            <span class="card-badge">Tool 06</span>
+                        </div>
+                        <p>Simulate how different bid rates compare against the reserve ceiling price.</p>
+                        
+                        <div class="slider-container">
+                            <div class="slider-val-box">
+                                <span class="slider-label">Reserve Ceiling Price (PHP/kWh) <button class="info-trigger" data-popup="pop-ceiling-reserve" aria-label="Reserve Info">i</button></span>
+                                <span class="slider-val" id="ceilingVal">6.50</span>
+                            </div>
+                            <input type="range" id="ceilingRange" min="4.00" max="9.00" step="0.05" value="6.50" class="custom-range">
+                        </div>
+
+                        <div class="slider-container">
+                            <div class="slider-val-box">
+                                <span class="slider-label">Submitted GenCo Bid Rate (PHP/kWh) <button class="info-trigger" data-popup="pop-ceiling-bid" aria-label="Bid Info">i</button></span>
+                                <span class="slider-val" id="bidRateVal">6.20</span>
+                            </div>
+                            <input type="range" id="bidRateRange" min="4.00" max="9.00" step="0.05" value="6.20" class="custom-range">
+                        </div>
+
+                        <div class="simulator-result-pane">
+                            <div class="simulator-status" id="simStatus">COMPLIANT</div>
+                            <p id="simDetails">Bid is within the ceiling price limit.</p>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 6 & Appendix D-2</span>
+                    </div>
+
+                    <!-- Feature 13: GenCo Pre-Qualification Validator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            GenCo Qualification Checker
+                            <button class="info-trigger" data-popup="pop-prequal" aria-label="Prequalification Info">i</button>
+                            <span class="card-badge">Tool 13</span>
+                        </div>
+                        <p>Verify if a bidding Generation Company satisfies all the core criteria required to qualify for bid evaluation.</p>
+                        <div class="check-row">
+                            <input type="checkbox" id="chkLegal">
+                            <label for="chkLegal">SEC Registration & SEC Certifications (Legal) <button class="info-trigger" data-popup="pop-chk-legal" aria-label="Legal Check Info">i</button></label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="chkTech">
+                            <label for="chkTech">Grid connection assessment & COC (Technical) <button class="info-trigger" data-popup="pop-chk-tech" aria-label="Tech Check Info">i</button></label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="chkFin">
+                            <label for="chkFin">Audited Financial Statements & debt ratio (Financial) <button class="info-trigger" data-popup="pop-chk-fin" aria-label="Fin Check Info">i</button></label>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <span>Status:</span>
+                            <div class="calc-result" id="qualificationStatus">INVALID</div>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Appendix C2 & D-1</span>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <!-- Feature 23: Levelized Cost of Electricity (LCOE) Calculator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            LCOE Performance Calculator
+                            <button class="info-trigger" data-popup="pop-lcoe" aria-label="LCOE Info">i</button>
+                            <span class="card-badge">Tool 23</span>
+                        </div>
+                        <p>Calculate the simulated Levelized Cost of Electricity (LCOE) to compare bids on equal financial grounds.</p>
+                        
+                        <div class="calc-grid-lcoe">
+                            <div class="form-group">
+                                <label for="lcoeCap" class="form-label">Capital Investment (M PHP) <button class="info-trigger" data-popup="pop-lcoe-cap" aria-label="Cap Cost Info">i</button></label>
+                                <input type="number" id="lcoeCap" class="form-control" value="80" min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="lcoeOm" class="form-label">Annual O&M Cost (M PHP) <button class="info-trigger" data-popup="pop-lcoe-om" aria-label="O&M Info">i</button></label>
+                                <input type="number" id="lcoeOm" class="form-control" value="5" min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="lcoeFactor" class="form-label">Capacity Factor (%) <button class="info-trigger" data-popup="pop-lcoe-factor" aria-label="Factor Info">i</button></label>
+                                <input type="number" id="lcoeFactor" class="form-control" value="25" min="1" max="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="lcoeLife" class="form-label">Operational Lifetime (Years) <button class="info-trigger" data-popup="pop-lcoe-life" aria-label="Life Info">i</button></label>
+                                <input type="number" id="lcoeLife" class="form-control" value="20" min="1">
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <span>Computed LCOE:</span>
+                            <div class="calc-result" id="lcoeResult">PHP 0.00/kWh</div>
+                        </div>
+
+                        <button class="btn btn-accent" id="calcLcoeBtn" style="width: 100%;">Compute LCOE</button>
+                        <span class="citation-ref">Ref: ERC Appendix D-2 LCOE Guidelines</span>
+                    </div>
+
+                    <!-- Feature 26: Multi-Criteria Weighted Evaluation Calculator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Weighted Bids Multi-Evaluator
+                            <button class="info-trigger" data-popup="pop-weighted" aria-label="Weighted Info">i</button>
+                            <span class="card-badge">Tool 26</span>
+                        </div>
+                        <p>Simulate bid scoring based on a multi-criteria system (Price vs Technical reliability vs Environmental score).</p>
+                        
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="wtPrice" class="form-label">Price Weight (%)</label>
+                                <input type="number" id="wtPrice" class="form-control" value="70" min="0" max="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="scorePrice" class="form-label">Price Score (0-100) <button class="info-trigger" data-popup="pop-weighted-score" aria-label="Score Info">i</button></label>
+                                <input type="number" id="scorePrice" class="form-control" value="90" min="0" max="100">
+                            </div>
+                        </div>
+
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="wtTech" class="form-label">Technical Weight (%)</label>
+                                <input type="number" id="wtTech" class="form-control" value="20" min="0" max="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="scoreTech" class="form-label">Technical Score (0-100)</label>
+                                <input type="number" id="scoreTech" class="form-control" value="85" min="0" max="100">
+                            </div>
+                        </div>
+
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="wtEnv" class="form-label">RPS/Env Weight (%)</label>
+                                <input type="number" id="wtEnv" class="form-control" value="10" min="0" max="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="scoreEnv" class="form-label">RPS/Env Score (0-100)</label>
+                                <input type="number" id="scoreEnv" class="form-control" value="95" min="0" max="100">
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <span>Combined Evaluation Score:</span>
+                            <div class="calc-result" id="weightedResult">0.00 / 100.00</div>
+                        </div>
+
+                        <button class="btn btn-accent" id="calcWeightedBtn" style="width: 100%;">Evaluate Bid Score</button>
+                        <span class="citation-ref">Ref: Appendix D-1 Technical Criteria Guidelines</span>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <!-- Feature 32: Fuel Indexation & Pass-Through Simulator (Section 6.5) (New Feature 3/5) -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Fuel Indexation Simulator
+                            <button class="info-trigger" data-popup="pop-fuel-sim" aria-label="Fuel Info">i</button>
+                            <span class="card-badge">Tool 32</span>
+                        </div>
+                        <p>Simulate how fuel commodity price fluctuations pass through to consumer generation tariffs. Apply ERC-enforced caps to protect consumers.</p>
+                        
+                        <div class="slider-container">
+                            <div class="slider-val-box">
+                                <span class="slider-label">Newcastle Coal Index ($/Ton) <button class="info-trigger" data-popup="pop-coal-idx" aria-label="Coal Index Info">i</button></span>
+                                <span class="slider-val" id="coalVal">150</span>
+                            </div>
+                            <input type="range" id="fuelCoalRange" min="50" max="300" step="5" value="150" class="custom-range">
+                        </div>
+
+                        <div class="slider-container">
+                            <div class="slider-val-box">
+                                <span class="slider-label">Brent Crude Oil Index ($/Bbl)</span>
+                                <span class="slider-val" id="oilVal">80</span>
+                            </div>
+                            <input type="range" id="fuelOilRange" min="40" max="150" step="2" value="80" class="custom-range">
+                        </div>
+
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="fuelBaseRate" class="form-label">Base Gen Rate (PHP/kWh)</label>
+                                <input type="number" id="fuelBaseRate" class="form-control" value="5.50" step="0.10">
+                            </div>
+                            <div class="form-group" style="display: flex; align-items: center; justify-content: center; padding-top: 20px;">
+                                <input type="checkbox" id="chkFuelCap" style="margin-right: 8px; width: 16px; height: 16px;">
+                                <label for="chkFuelCap" class="form-label" style="margin-bottom: 0;">Apply ERC 20% Cap <button class="info-trigger" data-popup="pop-fuel-cap" aria-label="Cap Info">i</button></label>
+                            </div>
+                        </div>
+
+                        <div class="simulator-result-pane">
+                            <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Adjusted Generation rate:</div>
+                            <div class="calc-result" id="fuelResultRate" style="margin: 5px 0;">PHP 5.50/kWh</div>
+                            <div id="fuelResultSavings" style="font-size: 11px; color: #10B981; font-weight: 600;">ERC Risk Mitigation Capping Active: Saved PHP 0.00/kWh</div>
+                        </div>
+                        
+                        <button class="btn btn-accent" id="btnSimFuel" style="width: 100%; margin-top: 15px;">Simulate Adjusted Tariff</button>
+                        <span class="citation-ref">Ref: ERC Guidelines on Rate Indexation, Section 6.5</span>
+                    </div>
+                    
+                    <!-- Dummy panel to keep grid aligned -->
+                    <div style="border: none; background: none; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 13px;">
+                        [ Fuel adjustment calculations are integrated into DU evaluation sheets. ]
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 07: Observer Protocols -->
+            <section id="observers" class="guide-section">
+                <div class="section-tag">Chapter 07</div>
+                <h2>CSP OBSERVER PROTOCOLS</h2>
+                <p>To prevent conflicts of interest and bid-rigging, DUs must invite consumer groups, business groups, or community representatives to monitor all stages of the bidding. Observers must execute a **Sworn Undertaking of Compliance** before participating.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 7: Observer Sworn Form Generator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Observer Letter & Sworn Undertaking Builder
+                            <button class="info-trigger" data-popup="pop-observers" aria-label="Observer Protocols Info">i</button>
+                            <span class="card-badge">Tool 07</span>
+                        </div>
+                        <p>Enter the details below to generate a custom Sworn Undertaking template complying with Annex A guidelines.</p>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="obsName" class="form-label">Observer Name</label>
+                                <input type="text" id="obsName" class="form-control" placeholder="e.g. Juan De La Cruz">
+                            </div>
+                            <div class="form-group">
+                                <label for="obsOrg" class="form-label">Organization <button class="info-trigger" data-popup="pop-obs-org" aria-label="Org Info">i</button></label>
+                                <input type="text" id="obsOrg" class="form-control" placeholder="e.g. Alliance of Energy Consumers">
+                            </div>
+                            <div class="form-group">
+                                <label for="obsDu" class="form-label">Distribution Utility (DU)</label>
+                                <input type="text" id="obsDu" class="form-control" placeholder="e.g. Manila Electric Company">
+                            </div>
+                            <div class="form-group">
+                                <label for="obsCity" class="form-label">Signing City</label>
+                                <input type="text" id="obsCity" class="form-control" placeholder="e.g. Pasig City">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-accent" id="generateDocBtn" style="width: 100%;">Build Sworn Undertaking</button>
+                        
+                        <div class="mock-document" id="mockDocOutput" style="display: none;">
+                            <!-- Custom legal document text will go here -->
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 9 & Appendix E</span>
+                    </div>
+
+                    <!-- Feature 28: Observer Report Template Generator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Observer Report Generator
+                            <button class="info-trigger" data-popup="pop-observer-report" aria-label="Report Info">i</button>
+                            <span class="card-badge">Tool 28</span>
+                        </div>
+                        <p>Generate a structured independent CSP audit report that observers are required to file directly with the ERC after bid awarding.</p>
+                        
+                        <div class="form-group">
+                            <label for="repCase" class="form-label">CSP Case / Case ID</label>
+                            <input type="text" id="repCase" class="form-control" placeholder="e.g. CSP-2026-001">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="repCompliance" class="form-label">Observer Compliance Finding</label>
+                            <select id="repCompliance" class="form-control">
+                                <option value="full">Process fully compliant with no deviations noted</option>
+                                <option value="minor_dev">Minor timeline deviations with justifications</option>
+                                <option value="major_dev">Significant conflict of interest or bid issues detected</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-accent" id="genReportBtn" style="width: 100%;">Compile Observer Report</button>
+                        
+                        <div class="mock-document" id="mockReportOutput" style="display: none;">
+                            <!-- Dynamic report outline will go here -->
+                        </div>
+                        <span class="citation-ref">Ref: ERC Appendix E Observer Audit Forms</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 08: Live CSP Monitor -->
+            <section id="live-monitor" class="guide-section">
+                <div class="section-tag">Chapter 08</div>
+                <h2>LIVE REGULATORY DASHBOARD MONITOR</h2>
+                <p>DUs must maintain a digital log of active and completed CSPs. This transparent dashboard serves as a mockup of how DUs track ongoing procurements for compliance.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 8: Live CSP Dashboard Monitor -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Simulated CSP Compliance Dashboard
+                            <button class="info-trigger" data-popup="pop-dashboard" aria-label="Dashboard Info">i</button>
+                            <span class="card-badge">Tool 08</span>
+                        </div>
+                        
+                        <div class="dash-grid">
+                            <div class="dash-box">
+                                <div class="dash-val" id="dashTotal">3</div>
+                                <div class="dash-lbl">Active CSPs <button class="info-trigger" data-popup="pop-dash-active" aria-label="Active Info">i</button></div>
+                            </div>
+                            <div class="dash-box">
+                                <div class="dash-val" id="dashOntime">100%</div>
+                                <div class="dash-lbl">On-Time Milestones</div>
+                            </div>
+                            <div class="dash-box">
+                                <div class="dash-val" id="dashExempt">2</div>
+                                <div class="dash-lbl">Exemptions Filed</div>
+                            </div>
+                        </div>
+
+                        <div class="dash-table-container">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>CSP Case ID</th>
+                                        <th>Distribution Utility</th>
+                                        <th>Capacity</th>
+                                        <th>Current Phase</th>
+                                        <th>Compliance Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>CSP-2026-001</strong></td>
+                                        <td>MERALCO</td>
+                                        <td>200 MW</td>
+                                        <td>Pre-Bid Conference</td>
+                                        <td><span class="badge-status active">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>CSP-2026-002</strong></td>
+                                        <td>BATELEC II</td>
+                                        <td>45 MW</td>
+                                        <td>Bid Evaluation</td>
+                                        <td><span class="badge-status active">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>CSP-2026-003</strong></td>
+                                        <td>ISELCO II</td>
+                                        <td>15 MW</td>
+                                        <td>PSA Joint Review</td>
+                                        <td><span class="badge-status review">Under Review</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 10.3</span>
+                    </div>
+
+                    <!-- Feature 25: CSP Bidding Process Simulator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            CSP Bidding Process Simulator
+                            <button class="info-trigger" data-popup="pop-game" aria-label="Simulator Info">i</button>
+                            <span class="card-badge">Tool 25</span>
+                        </div>
+                        <p>Simulate a mock bidding run as a distribution utility. Open bids, run audits, and evaluate compliance outcomes.</p>
+                        
+                        <div class="game-container">
+                            <div style="margin-bottom: 12px;">
+                                <strong>Active Simulation Log:</strong>
+                            </div>
+                            <div class="game-log" id="gameLog">
+                                [System] Idle. Ready to simulate bid opening...
+                            </div>
+                            <button class="btn btn-accent" id="gameRunBtn" style="width: 100%;">Trigger Bid Simulation</button>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Section 4 standard bidding guidelines</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 09: Resolution 07 Deep-Dive Focus -->
+            <section id="resolution-guidelines" class="guide-section">
+                <div class="section-tag">Chapter 09</div>
+                <h2>ERC Resolution No. 07, Series of 2026 Focus</h2>
+                <p>This chapter offers a specialized evaluation of **ERC Resolution No. 07, Series of 2026**, which establishes the *Amended Implementing Guidelines for the Procurement, Execution, and Evaluation of Power Supply Agreements Entered into by Distribution Utilities for the Supply of Electricity to their Captive Market*.</p>
+                <p>By enforcing mandatory joint filing, strict timeline milestones, and standardized LCOE comparisons, the regulator guarantees that captive electricity consumers are protected against uncompetitive tariff inflation.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 21: Captive Market PSA Eligibility Checker -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Captive Market PSA Eligibility Checker
+                            <button class="info-trigger" data-popup="pop-res07-elig" aria-label="PSA Package Eligibility Info">i</button>
+                            <span class="card-badge">Tool 21</span>
+                        </div>
+                        <p>Verify if a DU-GenCo Power Supply Agreement package satisfies the core validation filters required for regulatory filing under Resolution No. 07 rules.</p>
+                        
+                        <div class="checklist-container">
+                            <div class="check-row">
+                                <input type="checkbox" id="chkRes07Joint">
+                                <label for="chkRes07Joint">Joint DU-GenCo Signature and Filing Liability <button class="info-trigger" data-popup="pop-res07-joint" aria-label="Joint Info">i</button></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="chkRes07Lcoe">
+                                <label for="chkRes07Lcoe">Levelized tariff rate within TOR Ceiling limits <button class="info-trigger" data-popup="pop-res07-lcoe" aria-label="LCOE Ceiling Info">i</button></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="chkRes07Obs">
+                                <label for="chkRes07Obs">Sworn Undertaking from citizen observers logged <button class="info-trigger" data-popup="pop-res07-obs" aria-label="Observer Info">i</button></label>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <span>PSA Package Validity:</span>
+                            <div class="calc-result" id="psaStatus">NOT COMPLIANT</div>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 10</span>
+                    </div>
+
+                    <!-- Feature 30: RPS Target Calculator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            RPS Compliance Estimator
+                            <button class="info-trigger" data-popup="pop-rps" aria-label="RPS Info">i</button>
+                            <span class="card-badge">Tool 30</span>
+                        </div>
+                        <p>Calculate the minimum capacity of Renewable Energy (RE) a DU must procure annually to meet the Renewable Portfolio Standards (RPS) mandate.</p>
+                        
+                        <div class="form-group">
+                            <label for="rpsSales" class="form-label">Total Captive Sales (MWh / Year)</label>
+                            <input type="number" id="rpsSales" class="form-control" value="50000" min="100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rpsPercentage" class="form-label">RPS Minimum Increment Rate (%) <button class="info-trigger" data-popup="pop-rps-increment" aria-label="RPS Rate Info">i</button></label>
+                            <input type="number" id="rpsPercentage" class="form-control" value="2.52" step="0.01">
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <span>Minimum Annual RE Sourcing:</span>
+                            <div class="calc-result" id="rpsResult">0.00 MWh</div>
+                        </div>
+
+                        <button class="btn btn-accent" id="calcRpsBtn" style="width: 100%;">Compute RE Sourcing Target</button>
+                        <span class="citation-ref">Ref: DOE Circular on Renewable Portfolio Standards</span>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <!-- Feature 33: Outage Allowance & Penalty Calculator (Section 12) (New Feature 4/5) -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Outage & Penalty Calculator
+                            <button class="info-trigger" data-popup="pop-outage-calc" aria-label="Outage Info">i</button>
+                            <span class="card-badge">Tool 33</span>
+                        </div>
+                        <p>Calculate allowed planned/unplanned outage limits and estimate liquidated damages / penalties for generation plants exceeding yearly thresholds.</p>
+                        
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="outageUnplanned" class="form-label">Unplanned Outage Days <button class="info-trigger" data-popup="pop-outage-unplan" aria-label="Unplanned Info">i</button></label>
+                                <input type="number" id="outageUnplanned" class="form-control" value="20" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="outagePlanned" class="form-label">Planned Outage Days</label>
+                                <input type="number" id="outagePlanned" class="form-control" value="15" min="0">
+                            </div>
+                        </div>
+
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="outageCapacity" class="form-label">Capacity (MW)</label>
+                                <input type="number" id="outageCapacity" class="form-control" value="50" min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="outagePremium" class="form-label">Replacement Premium (PHP/kWh) <button class="info-trigger" data-popup="pop-outage-premium" aria-label="Premium Info">i</button></label>
+                                <input type="number" id="outagePremium" class="form-control" value="3.00" step="0.10">
+                            </div>
+                        </div>
+
+                        <div class="simulator-result-pane">
+                            <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Excess Outages: <span id="outageDaysExcess" style="color: var(--color-accent);">5 Days</span></div>
+                            <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-top: 5px;">Liquidated Damages Penalty:</div>
+                            <div class="calc-result" id="outageFineResult" style="margin: 5px 0; font-size: 18px;">PHP 0.00</div>
+                        </div>
+
+                        <button class="btn btn-accent" id="btnCalcOutage" style="width: 100%; margin-top: 15px;">Compute Outage Penalty</button>
+                        <span class="citation-ref">Ref: ERC Guidelines on Contract Outage Allowances, Section 12</span>
+                    </div>
+
+                    <!-- Feature 34: Market Price Reference (MPR) Benchmark Validator (Section 6.3) (New Feature 5/5) -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            MPR Benchmark Validator
+                            <button class="info-trigger" data-popup="pop-mpr-val" aria-label="MPR Info">i</button>
+                            <span class="card-badge">Tool 34</span>
+                        </div>
+                        <p>Validate if your proposed PSA tariff rate matches or beats the ERC's published Market Price Reference (MPR) spot benchmark, computing lifetime consumer savings.</p>
+                        
+                        <div class="form-grid" style="margin-bottom: 12px;">
+                            <div class="form-group">
+                                <label for="mprProposedRate" class="form-label">Proposed Bid rate (PHP/kWh) <button class="info-trigger" data-popup="pop-mpr-bid" aria-label="Bid Info">i</button></label>
+                                <input type="number" id="mprProposedRate" class="form-control" value="5.80" step="0.05">
+                            </div>
+                            <div class="form-group">
+                                <label for="mprReferenceRate" class="form-label">ERC MPR Benchmark (PHP/kWh)</label>
+                                <input type="number" id="mprReferenceRate" class="form-control" value="6.20" step="0.05">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label for="mprTerm" class="form-label">Contract Term (Years)</label>
+                            <select id="mprTerm" class="form-control">
+                                <option value="5">5 Years</option>
+                                <option value="10">10 Years</option>
+                                <option value="15" selected>15 Years</option>
+                            </select>
+                        </div>
+
+                        <div class="simulator-result-pane">
+                            <div class="simulator-status success" id="mprValidationResult" style="font-size: 11px; font-weight: 800;">COMPLIANT</div>
+                            <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-top: 5px;">Estimated Contract Lifetime Savings:</div>
+                            <div class="calc-result" id="mprSavingsResult" style="margin: 5px 0; font-size: 18px;">PHP 0.00</div>
+                        </div>
+
+                        <button class="btn btn-accent" id="btnCalcMpr" style="width: 100%; margin-top: 15px;">Validate Against MPR</button>
+                        <span class="citation-ref">Ref: ERC Market Pricing Benchmarks, Section 6.3</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 10: QA & Glossary -->
+            <section id="qa-glossary" class="guide-section">
+                <div class="section-tag">Chapter 10</div>
+                <h2>QA & REGULATORY GLOSSARY</h2>
+                <p>This chapter offers tools to help you search energy terms and ask regulatory compliance questions.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 9: Searchable Glossary of Regulatory Terms -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Searchable Glossary Index
+                            <button class="info-trigger" data-popup="pop-glossary" aria-label="Glossary Info">i</button>
+                            <span class="card-badge">Tool 09</span>
+                        </div>
+                        <div class="glossary-search-box">
+                            <input type="text" id="glossarySearch" class="form-control" placeholder="Search regulatory terms (e.g. PSA, DU, GenCo)...">
+                        </div>
+                        <div class="glossary-list" id="glossaryList">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 2</span>
+                    </div>
+
+                    <!-- Feature 14: Q&A Assistant -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Simulated CSP Helper Assistant
+                            <button class="info-trigger" data-popup="pop-qa" aria-label="Q&A Assistant Info">i</button>
+                            <span class="card-badge">Tool 14</span>
+                        </div>
+                        <div class="qa-chatbox">
+                            <div class="qa-messages" id="qaMessages">
+                                <div class="qa-msg bot">Hello! I am your regulatory guide assistant. Select a preset question below or type your inquiry regarding the 2026 Amended CSP rules.</div>
+                            </div>
+                            <div class="qa-suggestions">
+                                <button class="qa-suggest-btn" data-q="What is the maximum timeline for a CSP?">Timeline Limit</button>
+                                <button class="qa-suggest-btn" data-q="Who is responsible for filing the PSA application?">Who Files PSA?</button>
+                                <button class="qa-suggest-btn" data-q="What happens if the timeline is violated?">Timeline Violations</button>
+                            </div>
+                            <div class="qa-input-area">
+                                <input type="text" id="qaInput" class="qa-input" placeholder="Type a regulatory question...">
+                                <button class="qa-send-btn" id="qaSendBtn">Send</button>
+                            </div>
+                        </div>
+                        <span class="citation-ref">Ref: CSP Regulatory QA Database</span>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <!-- Feature 24: CSP External Links Portal -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Regulatory Links Portal
+                            <button class="info-trigger" data-popup="pop-links" aria-label="Links Info">i</button>
+                            <span class="card-badge">Tool 24</span>
+                        </div>
+                        <p>Browse external regulatory documents, guidelines, and compliance postings directly related to Philippine CSP rules.</p>
+                        
+                        <div class="links-grid">
+                            <div class="link-block">
+                                <div>
+                                    <h5>Amended Guidelines (Res 07)</h5>
+                                    <p>Official ERC Resolution No. 07, Series of 2026</p>
+                                </div>
+                                <a href="https://www.erc.gov.ph/Files/Render/issuance/47837" target="_blank" class="link-anchor-btn">View Link</a>
+                            </div>
+                            <div class="link-block">
+                                <div>
+                                    <h5>NEA CSP Portal</h5>
+                                    <p>Guidelines for Electric Cooperatives</p>
+                                </div>
+                                <a href="https://nea.gov.ph/ecs-csp/" target="_blank" class="link-anchor-btn">View Link</a>
+                            </div>
+                            <div class="link-block">
+                                <div>
+                                    <h5>Meralco ERC Postings</h5>
+                                    <p>Public bid postings and compliance case list</p>
+                                </div>
+                                <a href="https://company.meralco.com.ph/company-disclosures/erc-postings" target="_blank" class="link-anchor-btn">View Link</a>
+                            </div>
+                        </div>
+                        <span class="citation-ref">Ref: Official Government and Utility Repositories</span>
+                    </div>
+
+                    <!-- Feature 27: WESM Spot Price Simulator -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            WESM Spot Market Simulator
+                            <button class="info-trigger" data-popup="pop-wesm" aria-label="WESM Info">i</button>
+                            <span class="card-badge">Tool 27</span>
+                        </div>
+                        <p>Simulate pricing fluctuations in the Wholesale Electricity Spot Market (WESM) to evaluate long-term PSA hedges.</p>
+                        
+                        <div class="wesm-chart-mock">
+                            <div class="wesm-bar" style="height: 40%;" id="wBar0"><div class="wesm-bar-lbl">00:00</div></div>
+                            <div class="wesm-bar" style="height: 35%;" id="wBar1"><div class="wesm-bar-lbl">04:00</div></div>
+                            <div class="wesm-bar peak" style="height: 80%;" id="wBar2"><div class="wesm-bar-lbl">08:00</div></div>
+                            <div class="wesm-bar peak" style="height: 90%;" id="wBar3"><div class="wesm-bar-lbl">12:00</div></div>
+                            <div class="wesm-bar peak" style="height: 85%;" id="wBar4"><div class="wesm-bar-lbl">16:00</div></div>
+                            <div class="wesm-bar peak" style="height: 95%;" id="wBar5"><div class="wesm-bar-lbl">20:00</div></div>
+                            <div class="wesm-bar" style="height: 50%;" id="wBar6"><div class="wesm-bar-lbl">24:00</div></div>
+                        </div>
+
+                        <button class="btn btn-accent" id="wesmSimBtn" style="width: 100%;">Trigger Spot Price Shift</button>
+                        <span class="citation-ref">Ref: WESM Spot Market Rules, Chapter 3</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapter 11: Compliance Test -->
+            <section id="knowledge-test" class="guide-section">
+                <div class="section-tag">Chapter 11</div>
+                <h2>COMPLIANCE KNOWLEDGE TEST</h2>
+                <p>Test your organization's understanding of the 2026 rules. Complete this 5-question compliance quiz to evaluate your readiness for joint PSA applications.</p>
+
+                <div class="grid-2">
+                    <!-- Feature 10: Interactive Compliance Quiz -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Compliance Assessment Quiz
+                            <button class="info-trigger" data-popup="pop-quiz" aria-label="Quiz Info">i</button>
+                            <span class="card-badge">Tool 10</span>
+                        </div>
+                        <div class="quiz-box">
+                            <div class="quiz-question" id="qQuestion">Question will load here...</div>
+                            <div class="quiz-options" id="qOptions">
+                                <!-- Populated dynamically -->
+                            </div>
+                            <div class="quiz-feedback" id="qFeedback"></div>
+                            
+                            <div class="quiz-nav">
+                                <div class="quiz-score-display">Score: <span id="qScore">0</span> / 5</div>
+                                <button class="btn btn-outline" id="quizNextBtn" style="display: none;">Next Question</button>
+                                <button class="btn btn-accent" id="quizRestartBtn" style="display: none;">Restart Quiz</button>
+                            </div>
+                        </div>
+                        <span class="citation-ref">Ref: ERC Compliance Assessment Manual 2026</span>
+                    </div>
+
+                    <!-- Feature 11: Stepper 10 Phases -->
+                    <div class="interactive-card">
+                        <div class="card-title">
+                            Visual 10-Phase Stepper
+                            <button class="info-trigger" data-popup="pop-stepper" aria-label="Phases Stepper Info">i</button>
+                            <span class="card-badge">Tool 11</span>
+                        </div>
+                        <p>Click on any phase to view details about the procurement milestones.</p>
+                        <div class="stepper" id="stepperContainer">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                        <span class="citation-ref">Ref: ERC Resolution No. 07, Series of 2026, Section 4</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4>CSP<span>//2026</span></h4>
+                <p>An interactive educational portal explaining the Energy Regulatory Commission's Amended Implementing Guidelines for Competitive Selection Process (CSP) under Resolution No. 07, Series of 2026.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Chapters</h5>
+                <ul>
+                    <li><a href="#introduction">01 Introduction</a></li>
+                    <li><a href="#milestones">02 Timeline</a></li>
+                    <li><a href="#exemptions">03 Exemptions</a></li>
+                    <li><a href="#joint-filing">05 Filing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Tools</h5>
+                <ul>
+                    <li><a href="#milestones">Milestone Calculator</a></li>
+                    <li><a href="#exemptions">Eligibility Wizard</a></li>
+                    <li><a href="#appendix-docs">Document Explorer</a></li>
+                    <li><a href="#qa-glossary">Glossary Index</a></li>
+                </ul>
+            </div>
+            
+            <!-- Feature 20: Feedback & Inquiry Hub (Contact Form) -->
+            <div class="footer-col" id="feedbackHubCol">
+                <h5>Regulatory Inquiry Hub <button class="info-trigger" data-popup="pop-feedback-form" aria-label="Inquiry Info">i</button></h5>
+                <form id="feedbackForm">
+                    <div class="form-group" style="margin-bottom: 12px;">
+                        <input type="email" id="feedEmail" class="form-control" placeholder="Your Email Address" style="padding: 10px 14px; font-size: 13px;" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 12px;">
+                        <textarea id="feedMessage" class="form-control" rows="3" placeholder="Describe your inquiry..." style="padding: 10px 14px; font-size: 13px; height: 70px;" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-accent btn-outline" style="padding: 10px 20px; font-size: 13px; width: 100%;">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2026 | ERC CSP Guidelines | Educational Clone portal</div>
+            <div>Designed in compliance with WCAG AA accessibility standards</div>
+        </div>
+    </footer>
+
+    <!-- Floating Circular Scroll-to-Top Button (Feature 19) -->
+    <div class="floating-actions">
+        <div class="back-to-top-container" id="backToTopBtn" aria-label="Scroll back to top">
+            <svg class="circle-progress" viewBox="0 0 50 50">
+                <circle class="bg" cx="25" cy="25" r="21"></circle>
+                <circle class="progress" id="circleProgressPath" cx="25" cy="25" r="21"></circle>
+            </svg>
+            <span class="back-to-top-arrow">↑</span>
+        </div>
+    </div>
+
+    <!-- Success / Tooltip Modal Dialog -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon">✓</div>
+            <span class="info-modal-desc" id="modalSub" style="display: none;">REGULATORY CITATION</span>
+            <h3 id="modalTitle">Submission Successful</h3>
+            <p id="modalMessage">Your inquiry has been logged. Our regulatory support simulation has received your response.</p>
+            <button class="btn btn-accent" id="closeModalBtn" style="padding: 10px 30px;">Close Window</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
